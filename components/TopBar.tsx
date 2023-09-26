@@ -1,19 +1,35 @@
 import React from "react";
-import Image from "next/image";
 import { logo_vnademy } from "assets";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import CustomImage from "./CustomImage";
+import CustomButton from "./CustomButton";
+import styles from './style.module.css';
 
 export default function TopBar() {
 
+    const register = () => {
+
+    };
+
     return (
-        <div style={{ width: "100%", background: "red" }}>
+        <div className={styles.topbar_container}>
             <Container>
                 <Row>
-                    <Col>1 of 1</Col>
-                    <Col>1 of 1</Col>
+                    <CustomImage
+                        src={logo_vnademy}
+                        width={147}
+                        height={37}
+                        alt="logo_vnademy"
+                        style={{ objectFit: "cover" }}
+                    />
+                    <CustomButton
+                        title="ĐĂNG KÝ"
+                        onClick={register}
+                        width={105}
+                        height={42}
+                    />
                 </Row>
-
             </Container>
         </div>
-    )
+    );
 }
