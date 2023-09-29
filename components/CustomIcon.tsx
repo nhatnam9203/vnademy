@@ -1,7 +1,6 @@
 
 import styles from "./style.module.css";
 import { StaticImageData } from "next/image";
-import CustomImage from "./CustomImage";
 import Image from "next/image";
 import { CSSProperties } from "react";
 
@@ -38,12 +37,6 @@ export default function CustomIcon({
                 ...(style && { ...style }),
             }}
         >
-            {/* <CustomImage
-                src={icon}
-                width={width}
-                height={height}
-                alt={alt}
-            /> */}
             <Image
                 src={icon as any}
                 width={width}
