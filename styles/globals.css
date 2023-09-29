@@ -10,6 +10,14 @@
   --background-end-rgb: 255, 255, 255;
 
   --primary-color: #2B5DF5;
+  --black-color: #1D252C;
+  --white-color: #FFFFFF;
+  --blue-color: #2B5DF5;
+  --blue-2-color: #0046BE;
+  --yellow-color: #FFE000;
+  --green-color: #16C60C;
+  --red-color: #E81E25;
+  --gray-color: #90959E;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
