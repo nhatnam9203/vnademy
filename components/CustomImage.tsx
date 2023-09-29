@@ -11,13 +11,16 @@ interface IProps {
 
 export default function CustomImage({ src, width, height, alt, style }: IProps) {
     return (
-        <div style={{ width, height }}>
+        <div style={{
+            width,
+            height,
+            ...(style && { ...style })
+        }}>
             <Image
                 src={src as any}
                 width={width}
                 height={height}
                 alt={alt}
-                style={style ?? {}}
             />
         </div>
     )

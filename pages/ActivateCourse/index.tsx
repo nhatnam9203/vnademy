@@ -8,7 +8,7 @@ export default function ActivateCourse() {
 
   return (
     <>
-      <HeadPage title='Kịch hoạt khoá học' />
+      <HeadPage title='Kích hoạt khoá học' />
       <main>
         <TopBar />
       </main>

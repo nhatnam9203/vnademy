@@ -1,9 +1,21 @@
-.topbar_container{
+.topbar_wrap{
     height: 76px; 
     border-bottom: 1px solid #E0E0E0;
     display: flex;
     justify-content: center;
     align-items:center
+}
+
+.topbar_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.topbar_container_right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .custom_button{
@@ -12,5 +24,82 @@
     border-radius: 5px;
     outline: none !important;
     box-shadow: none !important;
-    border: none;
+    border: 1.3px solid transparent;
+    transition: all 0.25s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom_button:hover{
+    background: transparent;
+    color: var(--primary-color);
+    border: 1.3px solid var(--primary-color);
+}
+
+.custom_text{
+    
+}
+
+.custom_text_hover{
+    cursor: pointer;
+}
+
+.custom_text_hover:hover{
+    text-decoration: underline;
+}
+
+.custom_icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.custom_icon p{
+    margin-left: 8px;
+    font-size: 15px;
+    color: #1D252C;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.custom_icon_hover p:hover{
+    text-decoration: underline;
+}
+
+.custom_input{
+    border-radius: 6px;
+    border : 1px solid #E0E6EF;
+    padding: 6px;
+    width: 100%;
+
+}
+
+.topbar_container_left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.search_button{
+    height: 42px;
+    width: 53px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-left: -10px;
+    cursor: pointer;
+}
+
+.search_button:hover{
+    background-color: #1446de;
 }

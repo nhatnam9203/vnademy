@@ -14,10 +14,10 @@ export default function CustomButton({
     title = "", onClick, width = 50, height = 100, fontSize = 14, fontWeight = 700
 }: IProps) {
     return (
-        <button
+        <div
             style={{ width, height, fontSize, fontWeight }}
             onClick={onClick} className={styles.custom_button}>
             {title}
-        </button>
+        </div>
     )
 }

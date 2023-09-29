@@ -1,23 +1,24 @@
 
 import styles from "./style.module.css";
+import { CSSProperties } from "react";
 
 interface IProps {
     title: string,
-    width: number,
-    height: number,
     fontSize?: number,
     fontWeight?: number | string,
-    onClick: () => void,
+    color?: string | "#2B5DF5",
+    style? : CSSProperties,
+    isHover?: boolean
 }
 
 export default function CustomText({
-    title = "", onClick, width = 50, height = 100, fontSize = 14, fontWeight = 700
+    title = "", fontSize = 14, fontWeight = 700, color = "#2B5DF5", style, isHover
 }: IProps) {
     return (
-        <button
-            style={{ width, height, fontSize, fontWeight }}
-            onClick={onClick} className={styles.custom_button}>
+        <p
+            style={{ fontSize, fontWeight, color, ...(style && {...style}) }}
+            className={`${styles.custom_text} ${isHover ? styles.custom_text_hover : ''}`}>
             {title}
-        </button>
+        </p>
     )
 }

@@ -104,6 +104,24 @@ a {
   text-decoration: none;
 }
 
+p{
+  margin-bottom: 0px !important;
+}
+
+input{
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #70757D;
+  border: none !important;
+}
+
+input::placeholder{
+  font-size: 14px;
+  font-weight: 400;
+  color: #70757D;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
