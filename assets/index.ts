@@ -11,6 +11,9 @@ import ic_twitter from "./ic_twitter.png";
 import ic_youtube from "./ic_youtube.png";
 import ic_check from "./ic_check.png";
 import ic_check_gray from "./ic_check_gray.png";
+import ic_location from "./ic_location.png";
+import ic_linkedin from "./ic_linkedin.png";
+import ic_checked from "./ic_checked.png";
 
 
 export {
@@ -26,5 +29,8 @@ export {
     ic_youtube,
     ic_facebook_rounded,
     ic_check,
-    ic_check_gray
-}
+    ic_check_gray,
+    ic_location,
+    ic_linkedin,
+    ic_checked
+}   

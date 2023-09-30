@@ -1,0 +1,66 @@
+.activeCourse{
+    padding: 50px 16px 120px 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activeCourse_containier{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 460px;
+    width: 100%;
+}
+
+.orLoginWith{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.orLoginWith_line{
+    width: 100%;
+    max-width: 122px;
+    height: 1px;
+    background-color: #90959E;
+}
+
+.loginSocial{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.loginSocial_button{
+    height: 61px;
+    width: 220px;
+    max-width: 100%;
+    border: 1px solid #90959E;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.loginSocial_button:hover{
+    background: #eeeeee;
+}
+
+.forgotPass{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 16px;
+}
