@@ -75,7 +75,9 @@
     border : 1px solid #E0E6EF;
     padding: 6px;
     width: 100%;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .topbar_container_left{

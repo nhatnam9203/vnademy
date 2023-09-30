@@ -9,6 +9,8 @@ import ic_google_rounded from "./ic_google_rounded.png";
 import ic_facebook_rounded from "./ic_facebook_rounded.png";
 import ic_twitter from "./ic_twitter.png";
 import ic_youtube from "./ic_youtube.png";
+import ic_check from "./ic_check.png";
+import ic_check_gray from "./ic_check_gray.png";
 
 
 export {
@@ -22,5 +24,7 @@ export {
     ic_google_rounded,
     ic_twitter,
     ic_youtube,
-    ic_facebook_rounded
+    ic_facebook_rounded,
+    ic_check,
+    ic_check_gray
 }

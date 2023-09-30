@@ -22,8 +22,8 @@ export default function CustomIcon({
     onClick,
     width = 50,
     height = 100,
-    fontSize = 14,
-    fontWeight = 700,
+    fontSize,
+    fontWeight,
     icon,
     alt,
     style,
@@ -43,7 +43,10 @@ export default function CustomIcon({
                 height={height}
                 alt={alt}
             />
-            {title && <p>{title}</p>}
+            {title && <p style={{
+                ...(fontWeight && { fontWeight }),
+                ...(fontSize && { fontSize }),
+            }}>{title}</p>}
         </div>
     )
 }
