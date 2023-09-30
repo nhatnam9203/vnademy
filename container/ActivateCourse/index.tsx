@@ -52,9 +52,9 @@ export default function ActivateCourse() {
                         <CustomImage
                             src={isEmpty(value) ? ic_check_gray : ic_check}
                             alt="ic_check"
-                            width={20}
-                            height={20}
-                            style={{ marginRight: 8, marginTop: -6 }}
+                            width={21}
+                            height={21}
+                            style={{ marginRight: 8, marginTop: -7 }}
                         />
                     }
                 />
