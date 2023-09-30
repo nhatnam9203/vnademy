@@ -70,7 +70,7 @@ export default function ActivateCourse() {
                     style={{ marginTop: 20 }}
                 />
 
-                {isEmpty(value) && <CustomText
+                <CustomText
                     title="Vui lòng đăng nhập trước khi nhập mã kích hoạt"
                     fontWeight={500}
                     color="#E81E25"
@@ -83,7 +83,7 @@ export default function ActivateCourse() {
                         padding: 8,
                         marginTop: 14
                     }}
-                />}
+                />
 
                 <Stack style={{ margin: "auto", marginTop: 16 }} direction="horizontal" gap={1}>
                     <CustomText
