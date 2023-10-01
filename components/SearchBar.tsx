@@ -9,6 +9,9 @@ import {
 import Image from "next/image";
 
 export default function SearchBar() {
+
+    const [searchValue, setSearchValue] = React.useState("");
+
     return (
         <div className={styles.topbar_container_left}>
             <CustomIcon
@@ -20,9 +23,10 @@ export default function SearchBar() {
                 style={{ marginRight: 10, cursor: "pointer" }}
             />
             <CustomInput
-                value=""
+                value={searchValue}
                 placeholder="Tìm khoá học, giảng viên"
                 height={42}
+                onChange={e => setSearchValue(e.target.value)}
             />
             <SearchButton />
         </div>

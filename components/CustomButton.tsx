@@ -11,7 +11,8 @@ interface IProps {
     onClick: () => void,
     className?: string,
     style?: CSSProperties,
-    isHover?: boolean
+    isHover?: boolean,
+    type?: "button" | "reset" | "submit"
 }
 
 export default function CustomButton({
@@ -23,16 +24,18 @@ export default function CustomButton({
     fontWeight = 700, 
     className,
     style,
-    isHover = true
+    isHover = true,
+    type = "button"
 }: IProps) {
     return (
-        <div
+        <button
+            type={type}
             style={{ 
                 width, height, fontSize, fontWeight,
                 ...(style && { ...style })
              }}
             onClick={onClick} className={`${styles.custom_button} ${className ? className : ""} ${isHover ? styles.custom_button_hover : ""}`}>
             {title}
-        </div>
+        </button>
     )
 }

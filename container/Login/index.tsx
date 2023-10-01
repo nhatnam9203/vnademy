@@ -6,12 +6,9 @@ import { Stack, Form, Row } from "react-bootstrap";
 import {
     ic_facebook_rounded,
     ic_google_rounded,
-    ic_checked
 } from "assets";
 import React from "react";
 import styles from "./styles.module.css";
-import Checkbox from "react-custom-checkbox";
-import Image from "next/image";
 
 export default function Login() {
 

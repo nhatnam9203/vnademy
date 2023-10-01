@@ -1,26 +1,37 @@
 import CustomText from "@/components/CustomText";
-import CustomInput from "@/components/CustomInput";
 import CustomButton from "@/components/CustomButton";
 import CustomIcon from "@/components/CustomIcon";
-import CustomImage from "@/components/CustomImage";
+import CustomForm from "@/components/CustomForm";
+import CustomFormInput from "@/components/CustomFormInput";
 import { Stack } from "react-bootstrap";
 import {
     ic_facebook_rounded,
     ic_google_rounded,
-    ic_check,
-    ic_check_gray
 } from "assets";
 import React from "react";
 import styles from "./styles.module.css";
-import { isEmpty } from "lodash";
 
-export default function ActivateCourse() {
+interface IProps {
+    errosForm: object,
+    handleSubmit: any
+    controlForm: any
+}
+
+export default function ActivateCourse({
+    errosForm,
+    handleSubmit,
+    controlForm
+}: IProps) {
 
     const [value, setValue] = React.useState<string>('');
 
     const onChangeInput = (e: any) => {
         const inputValue = e.target.value;
         setValue(inputValue);
+    };
+
+    const onSubmitForm = (data: object) => {
+        console.log('on submit form : ', data);
     };
 
     return (
@@ -39,37 +50,35 @@ export default function ActivateCourse() {
                     fontSize={16}
                     style={{ marginTop: 8 }}
                 />
+                <CustomForm
+                    onSubmitFom={onSubmitForm}
+                    handleSubmit={handleSubmit}
+                >
+                    <CustomFormInput
+                        name={"activeCourse"}
+                        controlForm={controlForm}
+                        value={value}
+                        onChange={onChangeInput}
+                        placeholder="Nhập mã kích hoạt. Ví dụ : 103D344556"
+                        height={54}
+                        style={{ marginTop: 16, borderColor: "#70757D" }}
+                        inputStyle={{ padding: 8 }}
+                        fontWeight={400}
+                    />
 
-                <CustomInput
-                    value={value}
-                    onChange={onChangeInput}
-                    placeholder="Nhập mã kích hoạt. Ví dụ : 103D344556"
-                    height={54}
-                    style={{ marginTop: 16, borderColor: "#70757D" }}
-                    inputStyle={{ padding: 8 }}
-                    fontWeight={400}
-                    renderIcon={
-                        <CustomImage
-                            src={isEmpty(value) ? ic_check_gray : ic_check}
-                            alt="ic_check"
-                            width={21}
-                            height={21}
-                            style={{ marginRight: 8, marginTop: -7 }}
-                        />
-                    }
-                />
+                    <CustomButton
+                        title="KÍCH HOẠT NGAY"
+                        height={61}
+                        width={"100%"}
+                        isHover
+                        fontSize={20}
+                        fontWeight={700}
+                        onClick={() => { }}
+                        style={{ marginTop: 20 }}
+                        type="submit"
+                    />
 
-                <CustomButton
-                    title="KÍCH HOẠT NGAY"
-                    height={61}
-                    width={"100%"}
-                    isHover
-                    fontSize={20}
-                    fontWeight={700}
-                    onClick={() => { }}
-                    style={{ marginTop: 20 }}
-                />
-
+                </CustomForm>
                 <CustomText
                     title="Vui lòng đăng nhập trước khi nhập mã kích hoạt"
                     fontWeight={500}
