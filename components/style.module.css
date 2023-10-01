@@ -158,3 +158,10 @@
 .footerbar_bottom{
     border-bottom: 1px solid #E0E6EF;
 }
+
+.custom_input_error{
+    color : #D53831;
+    font-weight: 500;
+    fon-size: 16px;
+    margin-top: 5px
+}

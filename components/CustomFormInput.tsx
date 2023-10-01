@@ -18,7 +18,12 @@ interface IProps {
     renderIcon?: ReactNode,
     onChange?: (e: any) => void,
     controlForm?: any,
-    name: string
+    name: string,
+    type?: "password" | "text",
+    error?: {
+        message: string
+        type: string,
+    }
 }
 
 export default function CustomFormInput({
@@ -34,43 +39,48 @@ export default function CustomFormInput({
     renderIcon,
     onChange,
     controlForm,
-    name
+    name,
+    type = "text",
+    error
 }: IProps) {
 
     const { field } = useController({
         control: controlForm,
         name,
-    })
+    });
 
     return (
-        <div
-            className={styles.custom_input}
-            style={{
-                ...(width && { width }),
-                ...(height && { height }),
-                ...(style && { ...style }),
-            }}>
-            <input
-                type="text"
-                style={{
-                    fontSize,
-                    fontWeight,
-                    color,
-                    ...(inputStyle && { ...inputStyle }),
-                }}
+        <>
+            <div
                 className={styles.custom_input}
-                value={field.value || ""}
-                placeholder={placeholder}
-                onChange={(e) => { field.onChange(e.target.value) }}
-            />
-            {renderIcon ? renderIcon :
-                <CustomImage
-                    src={isEmpty(field.value) ? ic_check_gray : ic_check}
-                    alt="ic_check"
-                    width={21}
-                    height={21}
-                    style={{ marginRight: 8, marginTop: -7 }} />
-            }
-        </div>
+                style={{
+                    ...(width && { width }),
+                    ...(height && { height }),
+                    ...(style && { ...style }),
+                }}>
+                <input
+                    type={type}
+                    style={{
+                        fontSize,
+                        fontWeight,
+                        color,
+                        ...(inputStyle && { ...inputStyle }),
+                    }}
+                    className={styles.custom_input}
+                    value={field.value || ""}
+                    placeholder={placeholder}
+                    onChange={(e) => { field.onChange(e.target.value) }}
+                />
+                {renderIcon ? renderIcon :
+                    <CustomImage
+                        src={isEmpty(field.value) ? ic_check_gray : ic_check}
+                        alt="ic_check"
+                        width={21}
+                        height={21}
+                        style={{ marginRight: 8, marginTop: -7 }} />
+                }
+            </div>
+            {error && <p className={styles.custom_input_error}>{error?.message}</p>}
+        </>
     )
 }

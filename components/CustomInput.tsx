@@ -12,7 +12,8 @@ interface IProps {
     height?: number | string,
     placeholder?: string,
     renderIcon?: ReactNode,
-    onChange?: (e: any) => void
+    onChange?: (e: any) => void,
+    type?: "text" | "password"
 }
 
 export default function CustomInput({
@@ -26,7 +27,8 @@ export default function CustomInput({
     height,
     placeholder = "",
     renderIcon,
-    onChange
+    onChange,
+    type = "text"
 }: IProps) {
     return (
         <div
@@ -37,6 +39,7 @@ export default function CustomInput({
                 ...(style && { ...style }),
             }}>
             <input
+                type={type}
                 style={{
                     fontSize,
                     fontWeight,

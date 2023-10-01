@@ -1,8 +1,11 @@
-import CustomText from "@/components/CustomText";
-import CustomInput from "@/components/CustomInput";
-import CustomButton from "@/components/CustomButton";
-import CustomIcon from "@/components/CustomIcon";
-import { Stack, Form, Row } from "react-bootstrap";
+import {
+    CustomButton,
+    CustomText,
+    CustomIcon,
+    CustomFormInput,
+    CustomForm
+} from "components";
+import { Stack } from "react-bootstrap";
 import {
     ic_facebook_rounded,
     ic_google_rounded,
@@ -10,13 +13,32 @@ import {
 import React from "react";
 import styles from "./styles.module.css";
 
-export default function Login() {
+interface IErros{
+    email : object,
+    password: object
+}
+
+interface IProps {
+    errosForm: IErros,
+    handleSubmit: any
+    controlForm: any
+};
+
+export default function Login({
+    errosForm,
+    handleSubmit,
+    controlForm
+}: IProps) {
 
     const [value, setValue] = React.useState<string>('');
 
     const onChangeInput = (e: any) => {
         const inputValue = e.target.value;
         setValue(inputValue);
+    };
+
+    const onSubmitForm = (data: object) => {
+        console.log('on submit form : ', data);
     };
 
     return (
@@ -28,62 +50,76 @@ export default function Login() {
                     color="#1D252C"
                     fontSize={32}
                 />
-
-                <CustomInput
-                    value={value}
-                    onChange={onChangeInput}
-                    placeholder="Email / Số điện thoại"
-                    height={54}
-                    style={{ marginTop: 16, borderColor: "#70757D" }}
-                    inputStyle={{ padding: 8 }}
-                    fontWeight={400}
-                />
-
-                <CustomInput
-                    value={value}
-                    onChange={onChangeInput}
-                    placeholder="Mật khẩu"
-                    height={54}
-                    style={{ marginTop: 16, borderColor: "#70757D" }}
-                    inputStyle={{ padding: 8 }}
-                    fontWeight={400}
-                />
-
-                <div className={styles.forgotPass}>
-                    <Stack direction="horizontal" gap={1}>
-                        <input
-                            type="checkbox"
-                            id="isRemember"
-                            name="isRemember"
-                            value="isRemember"
-                        />
-                        <CustomText
-                            title="Ghi nhớ tài khoản"
-                            fontWeight={500}
-                            color="#70757D"
-                            fontSize={16}
-                        />
-                    </Stack>
-
-                    <CustomText
-                        title="Quên mật khẩu?"
-                        fontWeight={700}
-                        color="#2B5DF5"
-                        fontSize={16}
-                        isHover
+                <CustomForm
+                    onSubmitFom={onSubmitForm}
+                    handleSubmit={handleSubmit}
+                >
+                    <CustomFormInput
+                        name="email"
+                        value={value}
+                        onChange={onChangeInput}
+                        placeholder="Email / Số điện thoại"
+                        height={54}
+                        style={{ marginTop: 16, borderColor: "#70757D" }}
+                        inputStyle={{ padding: 8 }}
+                        fontWeight={400}
+                        controlForm={controlForm}
+                        renderIcon={<div />}
+                        error={errosForm?.email as any}
                     />
-                </div>
 
-                <CustomButton
-                    title="ĐĂNG NHẬP"
-                    height={61}
-                    width={"100%"}
-                    isHover
-                    fontSize={20}
-                    fontWeight={700}
-                    onClick={() => { }}
-                    style={{ marginTop: 20 }}
-                />
+                    <CustomFormInput
+                        name="password"
+                        type="password"
+                        value={value}
+                        onChange={onChangeInput}
+                        placeholder="Mật khẩu"
+                        height={54}
+                        style={{ marginTop: 16, borderColor: "#70757D" }}
+                        inputStyle={{ padding: 8 }}
+                        fontWeight={400}
+                        controlForm={controlForm}
+                        renderIcon={<div />}
+                        error={errosForm?.password as any}
+                    />
+
+                    <div className={styles.forgotPass}>
+                        <Stack direction="horizontal" gap={1}>
+                            <input
+                                type="checkbox"
+                                id="isRemember"
+                                name="isRemember"
+                                value="isRemember"
+                            />
+                            <CustomText
+                                title="Ghi nhớ tài khoản"
+                                fontWeight={500}
+                                color="#70757D"
+                                fontSize={16}
+                            />
+                        </Stack>
+
+                        <CustomText
+                            title="Quên mật khẩu?"
+                            fontWeight={700}
+                            color="#2B5DF5"
+                            fontSize={16}
+                            isHover
+                        />
+                    </div>
+
+                    <CustomButton
+                        title="ĐĂNG NHẬP"
+                        type="submit"
+                        height={61}
+                        width={"100%"}
+                        isHover
+                        fontSize={20}
+                        fontWeight={700}
+                        onClick={() => { }}
+                        style={{ marginTop: 20 }}
+                    />
+                </CustomForm>
 
                 <Stack style={{ margin: "auto", marginTop: 16 }} direction="horizontal" gap={1}>
                     <CustomText
