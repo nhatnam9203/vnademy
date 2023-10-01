@@ -79,6 +79,46 @@
     justify-content: center;
 }
 
+.custom_phone_input{
+
+}
+
+.phoneHeader_select{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 6px 0px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.phoneHeader_select_show{
+    opacity: 0 !important;
+}
+
+.phoneHeader_select div{
+    width: 84%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-left: 8%;
+    margin-right: 8%;    
+    transition: all 0.2s ease-in-out;
+}
+
+.phoneHeader_select div:hover{
+    background-color: #ffffff;
+}
+
 .topbar_container_left{
     display: flex;
     flex-direction: row;

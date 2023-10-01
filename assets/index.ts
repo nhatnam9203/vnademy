@@ -14,7 +14,9 @@ import ic_check_gray from "./ic_check_gray.png";
 import ic_location from "./ic_location.png";
 import ic_linkedin from "./ic_linkedin.png";
 import ic_checked from "./ic_checked.png";
-
+import ic_arrow_down from "./ic_arrow_down.png";
+import flag_en from "./flag_en.png";
+import flag_vn from "./flag_vn.png";
 
 export {
     logo_vnademy,
@@ -32,5 +34,8 @@ export {
     ic_check_gray,
     ic_location,
     ic_linkedin,
-    ic_checked
+    ic_checked,
+    ic_arrow_down,
+    flag_en,
+    flag_vn
 }   
