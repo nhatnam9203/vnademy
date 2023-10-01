@@ -3,11 +3,6 @@ import CustomInput from "@/components/CustomInput";
 import CustomButton from "@/components/CustomButton";
 import CustomPhoneInput from "@/components/CustomPhoneInput";
 import { Stack } from "react-bootstrap";
-import {
-    ic_facebook_rounded,
-    ic_google_rounded,
-    ic_checked
-} from "assets";
 import React from "react";
 import styles from "./styles.module.css";
 

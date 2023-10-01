@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import { CSSProperties, ReactNode, useState, useEffect, useref } from "react";
+import { CSSProperties, ReactNode, useState, useEffect } from "react";
 import {
     flag_en,
     flag_vn,
