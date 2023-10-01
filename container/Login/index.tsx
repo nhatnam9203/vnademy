@@ -56,6 +56,9 @@ export default function Login({
                 >
                     <CustomFormInput
                         name="email"
+                        controlForm={controlForm}
+                        error={errosForm?.email as any}
+                        renderIcon={<div />}
                         value={value}
                         onChange={onChangeInput}
                         placeholder="Email / Số điện thoại"
@@ -63,9 +66,6 @@ export default function Login({
                         style={{ marginTop: 16, borderColor: "#70757D" }}
                         inputStyle={{ padding: 8 }}
                         fontWeight={400}
-                        controlForm={controlForm}
-                        renderIcon={<div />}
-                        error={errosForm?.email as any}
                     />
 
                     <CustomFormInput
