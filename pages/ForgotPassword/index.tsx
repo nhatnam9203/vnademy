@@ -30,7 +30,7 @@ export default function Index() {
                 <TopBar />
                 <ForgotPassword
                     handleSubmit={handleSubmit}
-                    errosForm={errosForm}
+                    errosForm={errosForm as any}
                     controlForm={control}
                 />
                 <FooterBar />

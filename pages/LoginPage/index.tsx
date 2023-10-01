@@ -31,7 +31,7 @@ export default function Index() {
                 <TopBar />
                 <Login
                     handleSubmit={handleSubmit}
-                    errosForm={errosForm}
+                    errosForm={errosForm as any}
                     controlForm={control}
                 />
                 <FooterBar />
