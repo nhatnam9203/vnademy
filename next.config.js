@@ -5,7 +5,19 @@ const nextConfig = {
     return [
       {
         source: '/dang-ky-khoa-hoc',
-        destination: '/ActivateCourse', // The :path parameter is used here so will not be automatically passed in the query
+        destination: '/ActivateCourse',
+      },
+      {
+        source: '/dang-ky-vnademy',
+        destination: '/Register',
+      },
+      {
+        source: '/dang-nhap',
+        destination: '/LoginPage',
+      },
+      {
+        source: '/quen-mat-khau',
+        destination: '/ForgotPassword',
       },
     ]
   },
