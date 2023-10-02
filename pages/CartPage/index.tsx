@@ -25,7 +25,7 @@ export default function Index() {
     })
     return (
         <>
-            <HeadPage title='Quên mật khẩu' />
+            <HeadPage title='Giỏ hàng' />
             <main>
                 <TopBar />
                 <Cart

@@ -17,6 +17,10 @@ import ic_checked from "./ic_checked.png";
 import ic_arrow_down from "./ic_arrow_down.png";
 import flag_en from "./flag_en.png";
 import flag_vn from "./flag_vn.png";
+import ic_trash from "./ic_trash.png";
+import ic_clock from "./ic_clock.png";
+import ic_play from "./ic_play.png";
+import ic_vnd from "./ic_vnd.png";
 
 export {
     logo_vnademy,
@@ -37,5 +41,9 @@ export {
     ic_checked,
     ic_arrow_down,
     flag_en,
-    flag_vn
+    flag_vn,
+    ic_trash,
+    ic_clock,
+    ic_play,
+    ic_vnd
 }   
