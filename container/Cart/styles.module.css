@@ -30,3 +30,21 @@
     margin-top: 16px;
     padding: 0px;
 }
+
+.cart_checkout{
+    width: 100%;
+    background-color : var(--white-color);
+    height: 367px;
+    border-radius: 5px;
+}
+
+.cart_checkout_wrap{
+    padding:20px;
+}
+
+.hr{
+    width: 100%;
+    height: 1px;
+    background: #E0E6EF;
+    margin: 5px 0px;
+}

@@ -6,7 +6,7 @@ import { ic_check_gray, ic_check } from "assets";
 import CustomImage from "./CustomImage";
 
 interface IProps {
-    value: string,
+    value?: string,
     fontSize?: number,
     fontWeight?: number | string,
     color?: string | "#2B5DF5",

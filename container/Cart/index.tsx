@@ -3,6 +3,8 @@ import { Stack, Container, Row, Col } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
 import CartItem from "./CartItem";
+import CartCheckout from "./CartCheckout";
+import CartBuyWith from "./CartBuyWith";
 import {
     ic_plus,
     ic_trash
@@ -39,7 +41,7 @@ export default function Cart({
             </div>
 
             <div className={styles.cart_body}>
-                <Container style={{ paddingTop: 16 }}>
+                <Container style={{ paddingTop: 16, paddingBottom: 32 }}>
                     <Row>
                         <Col md={{ span: 8 }}>
                             <Stack direction="horizontal" gap={1}>
@@ -79,9 +81,18 @@ export default function Cart({
                         </Col>
 
                         <Col md={{ span: 4 }}>
+                            <CartCheckout
+                                errosForm={errosForm}
+                                handleSubmit={handleSubmit}
+                                controlForm={controlForm}
+                            />
                         </Col>
                     </Row>
                 </Container>
+
+                <div className={styles.cart_buy_with}>
+                    <CartBuyWith />
+                </div>
             </div>
         </>
     )

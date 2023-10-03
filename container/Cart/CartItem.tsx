@@ -1,5 +1,5 @@
 import { CustomText, CustomImage } from "@/components";
-import { Stack, Container, Row, Col } from "react-bootstrap";
+import { Stack } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
 import {

@@ -7,7 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
 const schema = yup.object().shape({
-    email: yup.string().required("Yêu cầu nhập email"),
+    promotion: yup.string().required("Vui lòng nhập mã giảm giá"),
 });
 
 
