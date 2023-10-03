@@ -55,6 +55,7 @@
     flex-direction: row;
     align-items: center;
     margin-right: 16px;
+    transition: all 0.3s;
 }
 
 .custom_icon p{
@@ -67,6 +68,10 @@
 
 .custom_icon_hover p:hover{
     text-decoration: underline;
+}
+
+.custom_icon_hover_transparent:hover{
+    background: rgb(0,0,0,0.05);
 }
 
 .custom_input{

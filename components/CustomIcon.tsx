@@ -15,6 +15,8 @@ interface IProps {
     alt: string,
     style?: CSSProperties,
     isHover?: boolean
+    titleColor?: string,
+    isHoverTransparent?: boolean
 }
 
 export default function CustomIcon({
@@ -27,11 +29,18 @@ export default function CustomIcon({
     icon,
     alt,
     style,
-    isHover
+    isHover,
+    titleColor,
+    isHoverTransparent
 }: IProps) {
     return (
         <div
-            className={`${styles.custom_icon} ${isHover ? styles.custom_icon_hover : ''}`}
+            className={
+                `${styles.custom_icon} 
+                ${isHover ? styles.custom_icon_hover : ''}
+                ${isHoverTransparent ? styles.custom_icon_hover_transparent : ''}
+                `
+            }
             onClick={onClick}
             style={{
                 ...(style && { ...style }),
@@ -46,6 +55,7 @@ export default function CustomIcon({
             {title && <p style={{
                 ...(fontWeight && { fontWeight }),
                 ...(fontSize && { fontSize }),
+                ...(titleColor && { color: titleColor }),
             }}>{title}</p>}
         </div>
     )

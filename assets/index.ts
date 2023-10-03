@@ -21,6 +21,8 @@ import ic_trash from "./ic_trash.png";
 import ic_clock from "./ic_clock.png";
 import ic_play from "./ic_play.png";
 import ic_vnd from "./ic_vnd.png";
+import ic_cart_image_example from "./ic_cart_image_example.png";
+import ic_plus from "./ic_plus.png";
 
 export {
     logo_vnademy,
@@ -45,5 +47,7 @@ export {
     ic_trash,
     ic_clock,
     ic_play,
-    ic_vnd
+    ic_vnd,
+    ic_cart_image_example,
+    ic_plus
 }   

@@ -1,8 +1,12 @@
-import { CustomText } from "@/components";
+import { CustomText, CustomIcon } from "@/components";
 import { Stack, Container, Row, Col } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
 import CartItem from "./CartItem";
+import {
+    ic_plus,
+    ic_trash
+} from "assets";
 
 interface IErros {
     email: object,
@@ -42,8 +46,36 @@ export default function Cart({
                                 <CustomText title="2" color="#1D252C" fontWeight={700} fontSize={16} />
                                 <CustomText title="khóa học trong giỏ hàng" color="#1D252C" fontWeight={400} fontSize={16} />
                             </Stack>
+                            <div style={{ paddingTop: 10 }}>
+                                <CartItem />
+                                <CartItem isLastItem={true} />
 
-                            <CartItem />
+                                <div className={styles.course_in_cart_button}>
+                                    <CustomIcon
+                                        icon={ic_plus}
+                                        alt="ic_plus"
+                                        width={20}
+                                        height={20}
+                                        title="MUA THÊM KHOÁ HỌC"
+                                        titleColor="#2B5DF5"
+                                        fontWeight={600}
+                                        style={{ border: "1px solid #2B5DF5", padding: "8px 16px", borderRadius: 3 }}
+                                        isHoverTransparent
+                                    />
+
+                                    <CustomIcon
+                                        icon={ic_trash}
+                                        alt="ic_plus"
+                                        width={20}
+                                        height={20}
+                                        title="XOÁ TẤT CẢ"
+                                        titleColor="#E81E25"
+                                        fontWeight={600}
+                                        style={{ border: "1px solid #E81E25", padding: "8px 16px", borderRadius: 3, marginRight: 0 }}
+                                        isHoverTransparent
+                                    />
+                                </div>
+                            </div>
                         </Col>
 
                         <Col md={{ span: 4 }}>
