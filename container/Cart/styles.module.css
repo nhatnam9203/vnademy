@@ -48,3 +48,9 @@
     background: #E0E6EF;
     margin: 5px 0px;
 }
+
+.cart_buy_with{
+    width: 100%;
+    background-color : var(--white-color);
+    height: 617px;
+}
