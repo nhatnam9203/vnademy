@@ -26,6 +26,7 @@ import ic_plus from "./ic_plus.png";
 import ic_star from "./ic_star.png";
 import ic_cart_image_example_2 from "./ic_cart_image_example_2.png";
 import ic_star_half from "./ic_star_half.png";
+import ic_arrow_right from "./ic_arrow_right.png";
 
 export {
     logo_vnademy,
@@ -55,5 +56,6 @@ export {
     ic_plus,
     ic_star,
     ic_cart_image_example_2,
-    ic_star_half
+    ic_star_half,
+    ic_arrow_right
 }   

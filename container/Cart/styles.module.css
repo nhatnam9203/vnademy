@@ -57,10 +57,9 @@
 
 .cart_buy_with_item{
     background-color: #ffffff;
-    width: 25%;
+    width: 98%;
     border: 1px solid #E0E6EF;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
     position: relative;
 }
 
@@ -71,4 +70,6 @@
 
 .cart_buy_with_container{
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
