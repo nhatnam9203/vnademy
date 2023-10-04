@@ -8,6 +8,7 @@ import CustomText from "./CustomText";
 import HeadPage from "./HeadPage";
 import SearchBar from "./SearchBar";
 import TopBar from "./TopBar";
+import CustomRow from "./CustomRow";
 
 export {
     CustomButton,
@@ -19,5 +20,6 @@ export {
     CustomText,
     HeadPage,
     SearchBar,
-    TopBar
+    TopBar,
+    CustomRow
 }

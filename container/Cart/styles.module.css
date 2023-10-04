@@ -54,3 +54,20 @@
     background-color : var(--white-color);
     height: 617px;
 }
+
+.cart_buy_with_item{
+    background-color: #ffffff;
+    width: 25%;
+    border: 1px solid #E0E6EF;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.cart_buy_with_item_bottom{
+    margin-top: 16px;
+    padding: 0px 16px 16px 16px;
+}
+
+.cart_buy_with_container{
+    margin-top: 20px;
+}

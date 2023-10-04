@@ -4,6 +4,8 @@ import store from "../state-management/store";
 import { Montserrat } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/globals.css';
+// import "~slick-carousel/slick/slick.css"; 
+// import "~slick-carousel/slick/slick-theme.css";
 
 const fontFace = Montserrat({ subsets: ['latin'] });
 

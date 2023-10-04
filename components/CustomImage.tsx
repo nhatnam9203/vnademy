@@ -3,8 +3,8 @@ import Image, { StaticImageData } from "next/image";
 
 interface IProps {
     src: StaticImageData,
-    width: number,
-    height: number,
+    width?: number | string,
+    height: number | string,
     alt: string,
     style?: CSSProperties
 }
@@ -17,9 +17,9 @@ export default function CustomImage({ src, width, height, alt, style }: IProps) 
             ...(style && { ...style })
         }}>
             <Image
-                src={src as any}
-                width={width}
-                height={height}
+                src={src as StaticImageData}
+                width={width as any}
+                height={height as any}
                 alt={alt}
             />
         </div>

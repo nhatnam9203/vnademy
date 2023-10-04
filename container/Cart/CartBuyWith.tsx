@@ -4,6 +4,8 @@ import {
     CustomText,
     CustomButton
 } from "components";
+import CartBuyWithItem from "./CartBuyWithItem";
+import styles from "./styles.module.css";
 
 interface IProps {
 };
@@ -19,6 +21,10 @@ export default function CartBuyWith({
                     fontWeight={700}
                     fontSize={26}
                 />
+
+                <div className={styles.cart_buy_with_container}>
+                    <CartBuyWithItem />
+                </div>
             </Row>
         </Container>
     )
