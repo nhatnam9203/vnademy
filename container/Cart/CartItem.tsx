@@ -12,16 +12,24 @@ import {
 import Image from "next/image";
 
 interface IProps {
-    isLastItem?: boolean
+    isLastItem?: boolean,
+    isFirstItem?: boolean,
 };
 
 export default function CartItem({
-    isLastItem = false
+    isLastItem = false,
+    isFirstItem = false
 }: IProps) {
     return (
         <div
             className={styles.course_in_cart}
-            style={{ borderBottom: !isLastItem ? "1px solid #dddddd" : "none" }}
+            style={{ 
+                borderBottom: !isLastItem ? "3px solid #F0F2F4" : "none",
+                borderTopLeftRadius: isFirstItem ? 8 : 0,
+                borderTopRightRadius: isFirstItem ? 8 : 0,
+                borderBottomLeftRadius: isLastItem ? 8 : 0,
+                borderBottomRightRadius: isLastItem ? 8 : 0
+             }}
         >
             <div className={styles.course_in_cart_row}>
                 <CustomImage

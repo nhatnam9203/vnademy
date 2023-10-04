@@ -49,8 +49,8 @@ export default function Cart({
                                 <CustomText title="khóa học trong giỏ hàng" color="#1D252C" fontWeight={400} fontSize={16} />
                             </Stack>
                             <div style={{ paddingTop: 10 }}>
-                                <CartItem />
-                                <CartItem isLastItem={true} />
+                                <CartItem isFirstItem />
+                                <CartItem isLastItem />
 
                                 <div className={styles.course_in_cart_button}>
                                     <CustomIcon
