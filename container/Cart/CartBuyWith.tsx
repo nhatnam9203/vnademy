@@ -1,10 +1,8 @@
 import React from "react";
-import { Container, Row, Stack } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import {
     CustomText,
-    CustomButton,
     CustomRow,
-    CustomIcon
 } from "components";
 import {
     ic_arrow_right
@@ -27,6 +25,17 @@ const settings = {
 
 export default function CartBuyWith({
 }: IProps) {
+
+    const refSlick = React.useRef<any>(null);
+
+    const next = () => {
+        refSlick.current?.slickNext?.();
+    };
+
+    const previous = () => {
+        refSlick.current?.slickPrev?.();
+    };
+
     return (
         <Container>
             <Row style={{ paddingTop: 30 }}>
@@ -38,18 +47,22 @@ export default function CartBuyWith({
                         fontSize={26}
                     />
 
-                    <div>
+                    <div style={{ marginRight: 5 }}>
                         <CustomRow>
-                            <div>
+                            <div className={styles.cart_buy_with_arrow}
+                                style={{ marginRight: 5 }}
+                                onClick={previous}
+                            >
                                 <Image
                                     width={9}
                                     height={15}
                                     src={ic_arrow_right}
                                     alt="ic_arrow_right"
+                                    style={{ transform: "rotate(180deg)" }}
                                 />
                             </div>
 
-                            <div>
+                            <div onClick={next} className={styles.cart_buy_with_arrow}>
                                 <Image
                                     width={9}
                                     height={15}
@@ -63,7 +76,7 @@ export default function CartBuyWith({
                 </CustomRow>
 
 
-                <Slider {...settings}>
+                <Slider ref={refSlick} {...settings}>
                     <CartBuyWithItem />
                     <CartBuyWithItem />
                     <CartBuyWithItem />
