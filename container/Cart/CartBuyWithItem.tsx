@@ -21,6 +21,18 @@ export default function CartBuyWithItem({
 }: IProps) {
     return (
         <div className={styles.cart_buy_with_item}>
+            <CustomText
+                title="- 65%"
+                color="white"
+                fontWeight={700}
+                fontSize={16}
+                style={{ 
+                    position: "absolute", left: 0, top: 0 ,
+                    backgroundColor: "#D53831",
+                    borderTopLeftRadius: 8,
+                    padding: "4px 10px"
+                }}
+            />
             <Image
                 src={ic_cart_image_example_2}
                 height={200}

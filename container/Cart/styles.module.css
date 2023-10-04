@@ -61,6 +61,7 @@
     border: 1px solid #E0E6EF;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    position: relative;
 }
 
 .cart_buy_with_item_bottom{
