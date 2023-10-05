@@ -5,7 +5,7 @@ interface IProps {
     src: StaticImageData,
     width?: number | string,
     height: number | string,
-    alt: string,
+    alt?: string,
     style?: CSSProperties
 }
 
@@ -20,7 +20,7 @@ export default function CustomImage({ src, width, height, alt, style }: IProps) 
                 src={src as StaticImageData}
                 width={width as any}
                 height={height as any}
-                alt={alt}
+                alt={alt ?? String(src)}
             />
         </div>
     )

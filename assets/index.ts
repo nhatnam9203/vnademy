@@ -27,6 +27,12 @@ import ic_star from "./ic_star.png";
 import ic_cart_image_example_2 from "./ic_cart_image_example_2.png";
 import ic_star_half from "./ic_star_half.png";
 import ic_arrow_right from "./ic_arrow_right.png";
+import ic_viettel_pay from "./ic_viettel_pay.png";
+import ic_momo from "./ic_momo.png";
+import ic_bank from "./ic_bank.png";
+import ic_visa from "./ic_visa.png";
+import ic_radio_on from "./ic_radio_on.png";
+import ic_radio_off from "./ic_radio_off.png"
 
 export {
     logo_vnademy,
@@ -57,5 +63,11 @@ export {
     ic_star,
     ic_cart_image_example_2,
     ic_star_half,
-    ic_arrow_right
+    ic_arrow_right,
+    ic_bank,
+    ic_momo,
+    ic_viettel_pay,
+    ic_visa,
+    ic_radio_off,
+    ic_radio_on
 }   
