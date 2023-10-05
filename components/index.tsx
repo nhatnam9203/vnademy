@@ -9,6 +9,7 @@ import HeadPage from "./HeadPage";
 import SearchBar from "./SearchBar";
 import TopBar from "./TopBar";
 import CustomRow from "./CustomRow";
+import CustomPhoneInput from "./CustomPhoneInput";
 
 export {
     CustomButton,
@@ -21,5 +22,6 @@ export {
     HeadPage,
     SearchBar,
     TopBar,
-    CustomRow
+    CustomRow,
+    CustomPhoneInput
 }

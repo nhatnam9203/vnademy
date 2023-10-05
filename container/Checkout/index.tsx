@@ -1,10 +1,15 @@
-import { CustomText, CustomIcon } from "@/components";
+import {
+    CustomText,
+    CustomIcon,
+    CustomFormInput,
+    CustomForm,
+    CustomPhoneInput,
+    CustomRow,
+    CustomInput
+} from "@/components";
 import { Stack, Container, Row, Col } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
-import CartItem from "./CartItem";
-import CartCheckout from "./CartCheckout";
-import CartBuyWith from "./CartBuyWith";
 import {
     ic_plus,
     ic_trash
@@ -22,14 +27,19 @@ interface IProps {
 };
 
 
-export default function Cart({
+export default function Checkout({
     errosForm,
     handleSubmit,
     controlForm
 }: IProps) {
+
+    const onSubmitForm = (data: object) => {
+        console.log('on submit form : ', data);
+    };
+
     return (
         <>
-            <div className={styles.cart_header}>
+            <div className={styles.checkout_header}>
                 <Container>
                     <CustomText
                         title="Thanh toán"
@@ -40,59 +50,82 @@ export default function Cart({
                 </Container>
             </div>
 
-            <div className={styles.cart_body}>
+            <div className={styles.checkout_body}>
                 <Container style={{ paddingTop: 16, paddingBottom: 32 }}>
                     <Row>
                         <Col md={{ span: 8 }}>
-                            <Stack direction="horizontal" gap={1}>
-                                <CustomText title="2" color="#1D252C" fontWeight={700} fontSize={16} />
-                                <CustomText title="khóa học trong giỏ hàng" color="#1D252C" fontWeight={400} fontSize={16} />
-                            </Stack>
-                            <div style={{ paddingTop: 10 }}>
-                                <CartItem isFirstItem />
-                                <CartItem isLastItem />
+                            <div className={styles.checkout_user_information}>
+                                <CustomText
+                                    title="THÔNG TIN NGƯỜI MUA"
+                                    fontSize={17}
+             r                       fontWeight={700}
+                                    color="#1D252C"
+                                />
 
-                                <div className={styles.course_in_cart_button}>
-                                    <CustomIcon
-                                        icon={ic_plus}
-                                        alt="ic_plus"
-                                        width={20}
-                                        height={20}
-                                        title="MUA THÊM KHOÁ HỌC"
-                                        titleColor="#2B5DF5"
-                                        fontWeight={600}
-                                        style={{ border: "1px solid #2B5DF5", padding: "8px 16px", borderRadius: 3 }}
-                                        isHoverTransparent
+                                <hr style={{ 
+                                    marginBottom: 24, marginLeft: -20, marginRight: -20 ,
+                                    borderColor: "#E0E6EF", opacity: 1
+                                    }} 
                                     />
 
-                                    <CustomIcon
-                                        icon={ic_trash}
-                                        alt="ic_plus"
-                                        width={20}
-                                        height={20}
-                                        title="XOÁ TẤT CẢ"
-                                        titleColor="#E81E25"
-                                        fontWeight={600}
-                                        style={{ border: "1px solid #E81E25", padding: "8px 16px", borderRadius: 3, marginRight: 0 }}
-                                        isHoverTransparent
+                                <CustomInput
+                                    value={"Nam Phan"}
+                                    onChange={() => { }}
+                                    placeholder="Họ tên"
+                                    height={54}
+                                    style={{ marginTop: 16, borderColor: "#70757D" }}
+                                    inputStyle={{ padding: 8 }}
+                                    fontWeight={400}
+                                />
+
+                                <CustomRow isBetween>
+
+                                    <CustomPhoneInput
+                                        value={"0987 654 321"}
+                                        onChange={() => { }}
+                                        placeholder="0987 6543 321"
+                                        height={54}
+                                        style={{ marginTop: 16, borderColor: "#70757D", width: "49%" }}
+                                        inputStyle={{ padding: 8 }}
+                                        fontWeight={400}
                                     />
-                                </div>
+
+                                    <CustomInput
+                                        value={"nhatnam9203@gmail.com"}
+                                        onChange={() => { }}
+                                        placeholder="Email"
+                                        height={54}
+                                        style={{ marginTop: 16, borderColor: "#70757D", width: "49%" }}
+                                        inputStyle={{ padding: 8 }}
+                                        fontWeight={400}
+                                    />
+                                </CustomRow>
+                            </div>
+
+                            <div
+                                className={styles.checkout_user_information}
+                                style={{ marginTop: 16 }}
+                            >
+                                <CustomText
+                                    title="CHỌN PHƯƠNG THỨC THANH TOÁN"
+                                    fontSize={17}
+                                    fontWeight={700}
+                                    color="#1D252C"
+                                />
+
+<hr style={{ 
+                                    marginBottom: 24, marginLeft: -20, marginRight: -20 ,
+                                    borderColor: "#E0E6EF", opacity: 1
+                                    }} 
+                                    />
                             </div>
                         </Col>
 
                         <Col md={{ span: 4 }}>
-                            <CartCheckout
-                                errosForm={errosForm}
-                                handleSubmit={handleSubmit}
-                                controlForm={controlForm}
-                            />
+
                         </Col>
                     </Row>
                 </Container>
-
-                <div className={styles.cart_buy_with}>
-                    <CartBuyWith />
-                </div>
             </div>
         </>
     )
