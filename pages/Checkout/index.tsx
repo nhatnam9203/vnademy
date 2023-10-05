@@ -1,7 +1,7 @@
 import HeadPage from '@/components/HeadPage';
 import TopBar from '@/components/TopBar';
 import FooterBar from "components/FoooterBar";
-import Cart from '@/container/Cart';
+import Checkout from '@/container/Checkout';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -25,10 +25,10 @@ export default function Index() {
     })
     return (
         <>
-            <HeadPage title='Giỏ hàng' />
+            <HeadPage title='Thanh toán' />
             <main>
                 <TopBar />
-                <Cart
+                <Checkout
                     handleSubmit={handleSubmit}
                     errosForm={errosForm as any}
                     controlForm={control}
