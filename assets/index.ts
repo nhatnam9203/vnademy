@@ -32,7 +32,8 @@ import ic_momo from "./ic_momo.png";
 import ic_bank from "./ic_bank.png";
 import ic_visa from "./ic_visa.png";
 import ic_radio_on from "./ic_radio_on.png";
-import ic_radio_off from "./ic_radio_off.png"
+import ic_radio_off from "./ic_radio_off.png";
+import ic_edit from "./ic_edit.png";
 
 export {
     logo_vnademy,
@@ -69,5 +70,6 @@ export {
     ic_viettel_pay,
     ic_visa,
     ic_radio_off,
-    ic_radio_on
+    ic_radio_on,
+    ic_edit
 }   

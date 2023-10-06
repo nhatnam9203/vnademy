@@ -6,10 +6,18 @@ interface IProps {
     width?: number | string,
     height: number | string,
     alt?: string,
-    style?: CSSProperties
+    style?: CSSProperties,
+    onClick?: (e: any) => void,
 }
 
-export default function CustomImage({ src, width, height, alt, style }: IProps) {
+export default function CustomImage({ 
+    src, 
+    width, 
+    height, 
+    alt, 
+    style, 
+    onClick = () =>{} 
+}: IProps) {
     return (
         <div style={{
             width,
@@ -17,6 +25,7 @@ export default function CustomImage({ src, width, height, alt, style }: IProps) 
             ...(style && { ...style })
         }}>
             <Image
+                onClick={onClick}
                 src={src as StaticImageData}
                 width={width as any}
                 height={height as any}
