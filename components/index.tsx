@@ -10,6 +10,7 @@ import SearchBar from "./SearchBar";
 import TopBar from "./TopBar";
 import CustomRow from "./CustomRow";
 import CustomPhoneInput from "./CustomPhoneInput";
+import CourseItem from "./CourseItem";
 
 export {
     CustomButton,
@@ -23,5 +24,6 @@ export {
     SearchBar,
     TopBar,
     CustomRow,
-    CustomPhoneInput
+    CustomPhoneInput,
+    CourseItem
 }
