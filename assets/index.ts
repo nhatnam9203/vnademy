@@ -34,6 +34,7 @@ import ic_visa from "./ic_visa.png";
 import ic_radio_on from "./ic_radio_on.png";
 import ic_radio_off from "./ic_radio_off.png";
 import ic_edit from "./ic_edit.png";
+import banner_example from "./banner_example.png";
 
 export {
     logo_vnademy,
@@ -71,5 +72,6 @@ export {
     ic_visa,
     ic_radio_off,
     ic_radio_on,
-    ic_edit
+    ic_edit,
+    banner_example
 }   
