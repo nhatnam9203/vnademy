@@ -5,3 +5,64 @@
     flex-direction: column;
     align-items: center;
 }
+
+.cart_buy_with_arrow{
+    border: 1px solid #2B5DF5;
+    padding: 3px 12px;
+    cursor: pointer;
+}
+
+.cart_buy_with_arrow:hover{
+    background: rgba(0,0,0,0.05);
+}
+
+.container_buy_item{
+    margin-top: 50px;
+}
+
+.course_decovery{
+    width: 100%;
+    background: #F0F2F4;
+    height: 600px;
+    padding-top: 80px;
+}
+
+.course_gird{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin-top: 24px;
+    grid-gap: 2px;
+}
+
+.course_gird_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    height: 168px;
+}
+
+.course_introduce{
+    background: #0046BE;
+    width: 100%;
+    padding: 50px 16px 80px 16px;
+}
+
+.course_introduce_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.teacher_item{
+    border : 1px solid #E0E6EF;
+    height: 383px;
+    padding-top: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-right: none;
+}

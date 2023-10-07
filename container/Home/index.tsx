@@ -9,13 +9,18 @@ import {
     CustomRow,
     CustomText,
     CustomIcon,
-    CustomImage
+    CustomImage,
+    CourseItem
 } from "components";
 import {
     ic_window,
     banner_example
 } from "assets";
 import Slider from "react-slick";
+import TitleContainer from "./TitleContainer";
+import CourseDecovery from "./CourseDecovery";
+import CourseIntroduce from "./CourseIntroduce";
+import Teachers from "./Teachers";
 
 const settings = {
     dots: true,
@@ -25,9 +30,20 @@ const settings = {
     slidesToScroll: 1
 };
 
+const settings_container_buy_item = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 2
+};
+
 
 export default function () {
 
+    const refSlick1 = React.useRef<any>(null);
+    const refSlick2 = React.useRef<any>(null);
+    const refSlick3 = React.useRef<any>(null);
     return (
         <>
 
@@ -82,6 +98,70 @@ export default function () {
                     width={"100%"}
                 />
             </Slider>
+
+            <Container>
+                <div className={styles.container_buy_item}>
+                    <TitleContainer
+                        title="TOP BÁN CHẠY"
+                        viewAll={() => { }}
+                        previous={() => refSlick1.current?.slickPrev?.()}
+                        next={() => refSlick1.current?.slickNext?.()}
+
+                    />
+
+                    <Slider
+                        ref={refSlick1}
+                        {...settings_container_buy_item}
+                    >
+                        {new Array(8).fill(null).map((it, key) => (
+                            <CourseItem key={Math.random()} />
+                        ))}
+                    </Slider>
+                </div>
+
+                <div className={styles.container_buy_item}>
+                    <TitleContainer
+                        title="SIÊU ƯU ĐÃI HÔM NAY"
+                        viewAll={() => { }}
+                        previous={() => refSlick2.current?.slickPrev?.()}
+                        next={() => refSlick2.current?.slickNext?.()}
+                    />
+
+                    <Slider
+                        ref={refSlick2}
+                        {...settings_container_buy_item}
+                    >
+                        {new Array(8).fill(null).map((it, key) => (
+                            <CourseItem key={Math.random()} />
+                        ))}
+                    </Slider>
+                </div>
+
+                <div
+                    className={styles.container_buy_item}
+                    style={{ marginBottom: 100 }}
+                >
+                    <TitleContainer
+                        title="KHÓA HỌC MỚI RA MẮT"
+                        viewAll={() => { }}
+                        previous={() => refSlick3.current?.slickPrev?.()}
+                        next={() => refSlick3.current?.slickNext?.()}
+                    />
+
+                    <Slider
+                        ref={refSlick3}
+                        {...settings_container_buy_item}
+                    >
+                        {new Array(8).fill(null).map((it, key) => (
+                            <CourseItem key={Math.random()} />
+                        ))}
+                    </Slider>
+                </div>
+            </Container>
+
+            <CourseDecovery />
+            <CourseIntroduce />
+            <Teachers />
         </>
     )
 }

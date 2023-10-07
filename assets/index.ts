@@ -35,6 +35,18 @@ import ic_radio_on from "./ic_radio_on.png";
 import ic_radio_off from "./ic_radio_off.png";
 import ic_edit from "./ic_edit.png";
 import banner_example from "./banner_example.png";
+import ic_heal from "./ic_heal.png";
+import ic_building from "./ic_building.png";
+import ic_technology from "./ic_technology.png";
+import ic_sales from "./ic_sales.png";
+import ic_skill from "./ic_skill.png";
+import ic_accountant from "./ic_accountant.png";
+import ic_business from "./ic_business.png";
+import ic_marketing from "./ic_marketing.png";
+import ic_computer from "./ic_computer.png";
+import ic_language from "./ic_language.png";
+import ic_people_course from "./ic_people_course.png";
+import teacher_example from "./techer_example.png";
 
 export {
     logo_vnademy,
@@ -73,5 +85,18 @@ export {
     ic_radio_off,
     ic_radio_on,
     ic_edit,
-    banner_example
+    banner_example,
+    ic_accountant,
+    ic_building,
+    ic_business,
+    ic_computer,
+    ic_heal,
+    ic_language,
+    ic_marketing,
+    ic_sales,
+    ic_skill,
+    ic_technology,
+    ic_people_course,
+    teacher_example
+    
 }   
