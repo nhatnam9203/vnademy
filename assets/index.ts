@@ -50,6 +50,7 @@ import teacher_example from "./techer_example.png";
 import ic_arrow_right_white from "./ic_arrow_right_white.png";
 import ic_star_half_2 from "./ic_start_half_2.png";
 import ic_double_person from "./ic_double_person.png";
+import ic_ticked from "./ic_ticked.png";
 
 export {
     logo_vnademy,
@@ -103,6 +104,7 @@ export {
     teacher_example,
     ic_arrow_right_white,
     ic_star_half_2,
-    ic_double_person
+    ic_double_person,
+    ic_ticked
     
 }   
