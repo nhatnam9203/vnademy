@@ -47,6 +47,9 @@ import ic_computer from "./ic_computer.png";
 import ic_language from "./ic_language.png";
 import ic_people_course from "./ic_people_course.png";
 import teacher_example from "./techer_example.png";
+import ic_arrow_right_white from "./ic_arrow_right_white.png";
+import ic_star_half_2 from "./ic_start_half_2.png";
+import ic_double_person from "./ic_double_person.png";
 
 export {
     logo_vnademy,
@@ -97,6 +100,9 @@ export {
     ic_skill,
     ic_technology,
     ic_people_course,
-    teacher_example
+    teacher_example,
+    ic_arrow_right_white,
+    ic_star_half_2,
+    ic_double_person
     
 }   

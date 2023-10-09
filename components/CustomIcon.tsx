@@ -3,6 +3,9 @@ import styles from "./style.module.css";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { CSSProperties } from "react";
+import {
+    isEmpty
+} from "lodash";
 
 interface IProps {
     icon: StaticImageData,
@@ -31,7 +34,7 @@ export default function CustomIcon({
     style,
     isHover,
     titleColor,
-    isHoverTransparent
+    isHoverTransparent,
 }: IProps) {
     return (
         <div

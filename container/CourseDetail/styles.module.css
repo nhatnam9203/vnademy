@@ -1,0 +1,14 @@
+.cart_header{
+    width: 100vw;
+    background-color: var( --blue-2-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.cart_body{
+    background: #F0F2F4;
+    width: 100%;
+}
