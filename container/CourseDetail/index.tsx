@@ -3,6 +3,8 @@ import { Stack, Container, Row, Col } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import WhatYouLearn from "./WhatYouLearn";
+import CourseContent from "./CourseContent";
 
 import {
     ic_arrow_right_white,
@@ -148,6 +150,9 @@ export default function Cart({
                                 fontSize={14}
                             />
                         </Stack>
+
+                        <WhatYouLearn />
+                        <CourseContent />
                     </Col>
                     <Col md={{ span: 4 }}>
 

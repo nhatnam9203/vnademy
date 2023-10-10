@@ -12,3 +12,18 @@
     background: #F0F2F4;
     width: 100%;
 }
+
+.what_you_learn{
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 24px 24px 50px 24px;
+}
+
+.icon_plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-right: 1px solid #C5CBD5;
+}
