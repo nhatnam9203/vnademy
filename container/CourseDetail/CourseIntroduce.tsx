@@ -19,7 +19,7 @@ export default function () {
                 color='#1D252C'
                 fontWeight={400}
                 fontSize={14}
-                style={{ marginTop: 20 }}
+                style={{ marginTop: 12 }}
             />
         </div>
     );

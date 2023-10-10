@@ -6,6 +6,8 @@ import Image from "next/image";
 import WhatYouLearn from "./WhatYouLearn";
 import CourseContent from "./CourseContent";
 import CourseIntroduce from "./CourseIntroduce";
+import TeacherInformation from "./TeacherInformation";
+import StudentRating from "./StudentRating";
 
 import {
     ic_arrow_right_white,
@@ -155,6 +157,8 @@ export default function Cart({
                         <WhatYouLearn />
                         <CourseContent />
                         <CourseIntroduce />
+                        <TeacherInformation />
+                        <StudentRating />
                     </Col>
                     <Col md={{ span: 4 }}>
 
