@@ -28,9 +28,10 @@ export default function () {
                 fontWeight={700}
             />
             <div style={{ marginTop: 20 }}>
-            <CourseItem />
-            <CourseItem />
-            <CourseItem />
+                <CourseItem />
+                <CourseItem />
+                <CourseItem />
+                <CourseItem />
             </div>
         </div>
     );
@@ -40,19 +41,27 @@ const CourseItem = () => {
 
     const [isCollapsed, setCollapsed] = React.useState<boolean>(false);
 
+    const toggleExpand = () => {
+        setCollapsed(!isCollapsed);
+    }
+
     return (
         <SlideToggle
-            onExpanding={() => setCollapsed(true)}
-            onCollapsed={() => setCollapsed(false)}
             render={({
-                toggle, setCollapsibleElement }: any) => (
+                toggle,
+                setCollapsibleElement
+            }: any) => (
                 <div className="my-collapsible">
-                    <div onClick={toggle} className="my-collapsible__toggle">
+                    <div onClick={() => {
+                        toggle();
+                        toggleExpand();
+                    }} className="my-collapsible__toggle"
+                    >
                         <CustomRow
                             style={{
                                 background: "#F6FAFF",
                                 border: "1px solid #C5CBD5",
-                                cursor: "pointer"
+                                cursor: "pointer",
                             }}>
                             <div className={styles.icon_plus}>
                                 {
@@ -75,7 +84,7 @@ const CourseItem = () => {
                                 fontWeight={700}
                                 fontSize={14}
                                 color='#1D252C'
-                                style={{ marginLeft: 16 }}
+                                style={{ marginLeft: 16, userSelect: "none" }}
                             />
                         </CustomRow>
                     </div>
