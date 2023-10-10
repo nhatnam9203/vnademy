@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import WhatYouLearn from "./WhatYouLearn";
 import CourseContent from "./CourseContent";
+import CourseIntroduce from "./CourseIntroduce";
 
 import {
     ic_arrow_right_white,
@@ -153,6 +154,7 @@ export default function Cart({
 
                         <WhatYouLearn />
                         <CourseContent />
+                        <CourseIntroduce />
                     </Col>
                     <Col md={{ span: 4 }}>
 
