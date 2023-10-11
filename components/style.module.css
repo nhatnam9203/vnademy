@@ -18,7 +18,7 @@
     justify-content: center;
 }
 
-.custom_button{
+.custom_button .custom_button_transparent{
     background: var(--primary-color);
     color: #ffffff;
     border-radius: 5px;
@@ -30,6 +30,16 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.custom_button_transparent{
+    background: transparent;
+    color: var(--primary-color);
+    border: 1.3px solid var(--primary-color);
+}
+
+.custom_button_transparent:hover{
+    background-color: #eeeeee;
 }
 
 .custom_button_hover:hover{

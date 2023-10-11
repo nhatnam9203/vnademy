@@ -12,7 +12,8 @@ interface IProps {
     className?: string,
     style?: CSSProperties,
     isHover?: boolean,
-    type?: "button" | "reset" | "submit"
+    type?: "button" | "reset" | "submit",
+    isButtonTransparent? : boolean
 }
 
 export default function CustomButton({
@@ -25,8 +26,14 @@ export default function CustomButton({
     className,
     style,
     isHover = true,
-    type = "button"
+    type = "button",
+    isButtonTransparent = false
 }: IProps) {
+
+    const _className = isButtonTransparent ? `${styles.custom_button_transparent} ${className ? className : ""} ${isHover ? styles.custom_button_transparent_hover : ""}` : 
+    
+    `${styles.custom_button} ${className ? className : ""} ${isHover ? styles.custom_button_hover : ""}` 
+
     return (
         <button
             type={type}
@@ -34,7 +41,8 @@ export default function CustomButton({
                 width, height, fontSize, fontWeight,
                 ...(style && { ...style })
              }}
-            onClick={onClick} className={`${styles.custom_button} ${className ? className : ""} ${isHover ? styles.custom_button_hover : ""}`}>
+            onClick={onClick} 
+            className={_className}>
             {title}
         </button>
     )
