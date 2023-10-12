@@ -8,6 +8,7 @@ import CourseContent from "./CourseContent";
 import CourseIntroduce from "./CourseIntroduce";
 import TeacherInformation from "./TeacherInformation";
 import StudentRating from "./StudentRating";
+import OtherCourse from "./OtherCourse";
 
 import {
     ic_arrow_right_white,
@@ -153,12 +154,6 @@ export default function Cart({
                                 fontSize={14}
                             />
                         </Stack>
-
-                        <WhatYouLearn />
-                        <CourseContent />
-                        <CourseIntroduce />
-                        <TeacherInformation />
-                        <StudentRating />
                     </Col>
                     <Col md={{ span: 4 }}>
 
@@ -170,7 +165,12 @@ export default function Cart({
                 <Container style={{ paddingTop: 16, paddingBottom: 32 }}>
                     <Row>
                         <Col md={{ span: 8 }}>
-
+                        <WhatYouLearn />
+                        <CourseContent />
+                        <CourseIntroduce />
+                        <TeacherInformation />
+                        <StudentRating />
+                        <OtherCourse />
                         </Col>
 
                         <Col md={{ span: 4 }}>
