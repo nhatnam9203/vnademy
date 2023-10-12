@@ -36,7 +36,7 @@ export default function () {
 
             {
                 new Array(3).fill(null).map(() => (
-                    <CustomRow style={{ marginTop: 16 }}>
+                    <CustomRow key={Math.random()} style={{ marginTop: 16 }}>
                         <CustomRow>
                             <CustomImage
                                 src={ic_cart_image_example_2}
