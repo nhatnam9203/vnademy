@@ -31,7 +31,7 @@ export default function CustomTextCurrency({
     iconGrey = false
 }: IProps) {
     return (
-        <CustomRow>
+        <CustomRow width={"auto"}>
             <p
                 onClick={onClick}
                 style={{ fontSize, fontWeight, color, ...(style && { ...style }) }}
