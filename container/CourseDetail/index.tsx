@@ -176,7 +176,11 @@ export default function Cart({
                         </Col>
 
                         <Col md={{ span: 4 }}>
-                            <CourseDetailCheckout />
+                            <CourseDetailCheckout
+                                errosForm={errosForm}
+                                handleSubmit={handleSubmit}
+                                controlForm={controlForm}
+                            />
 
                         </Col>
                     </Row>

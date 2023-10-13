@@ -76,3 +76,7 @@
 .button_buy_now{
     border: 1.3px solid #FFE000 !important;
 }
+
+.courde_detail_checkout{
+    transform: translateY(-300px);
+}

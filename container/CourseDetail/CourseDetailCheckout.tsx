@@ -3,7 +3,8 @@ import styles from "./styles.module.css";
 import {
     CustomText,
     CustomRow,
-    CustomButton
+    CustomButton,
+    CustomFormInput
 } from "components";
 import {
     ic_promotion
@@ -14,12 +15,23 @@ import {
     ic_clock_2,
     ic_play,
     ic_hand,
-    ic_reward
+    ic_reward,
+    ic_heart
 } from "assets";
 
-export default function () {
+interface IProps {
+    errosForm: object,
+    handleSubmit: any
+    controlForm: any
+};
+
+export default function ({
+    errosForm,
+    handleSubmit,
+    controlForm
+}: IProps) {
     return (
-        <div className={styles.course_introduce}>
+        <div className={`${styles.course_introduce} ${styles.courde_detail_checkout}`}>
             <CustomRow isBetween>
                 <CustomText
                     title='349.000 đ'
@@ -145,6 +157,43 @@ export default function () {
             </Stack>
 
             <hr style={{ marginLeft: -24, marginRight: -24, marginTop: 24 }} />
+
+            <Stack direction="horizontal" style={{ marginTop: 30 }}>
+                <CustomFormInput
+                    name={"promotion"}
+                    controlForm={controlForm}
+                    placeholder="Nhập mã giảm giá"
+                    height={54}
+                    style={{ borderColor: "#70757D" }}
+                    inputStyle={{ padding: 8 }}
+                    fontWeight={400}
+                    renderIcon={<div />}
+                />
+
+                <CustomButton
+                    title="Áp dụng"
+                    height={54}
+                    style={{
+                        backgroundColor: "#1D252C", borderTopLeftRadius: 0,
+                        borderBottomLeftRadius: 0,
+                        marginLeft: -5
+                    }}
+                    width={105}
+                    onClick={() => { }}
+                    isHover={false}
+                />
+            </Stack>
+
+            <CustomRow style={{ paddingTop: 30, justifyContent: "center", cursor: "pointer" }}>
+                <Image src={ic_heart} width={20} height={18} alt='ic_heart' />
+                <CustomText
+                    title='THÊM VÀO YÊU THÍCH'
+                    color='#2B5DF5'
+                    fontWeight={700}
+                    fontSize={14}
+                    style={{ marginLeft: 8 }}
+                />
+            </CustomRow>
 
         </div>
     );
