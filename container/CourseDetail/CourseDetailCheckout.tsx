@@ -4,7 +4,8 @@ import {
     CustomText,
     CustomRow,
     CustomButton,
-    CustomFormInput
+    CustomFormInput,
+    CustomTextCurrency
 } from "components";
 import {
     ic_promotion
@@ -16,7 +17,7 @@ import {
     ic_play,
     ic_hand,
     ic_reward,
-    ic_heart
+    ic_heart,
 } from "assets";
 
 interface IProps {
@@ -33,11 +34,14 @@ export default function ({
     return (
         <div className={`${styles.course_introduce} ${styles.courde_detail_checkout}`}>
             <CustomRow isBetween>
-                <CustomText
-                    title='349.000 đ'
+                <CustomTextCurrency
+                    title='349.000'
                     color='#1D252C'
                     fontWeight={700}
                     fontSize={32}
+                    iconStyle={{ marginTop: -10, marginLeft: 2 }}
+                    iconWidth={16}
+                    iconHeight={20}
                 />
                 <Stack style={{
                     border: "1px solid #E81E25", borderRadius: 8, padding: 12, height: 30, marginTop: 10
@@ -61,12 +65,16 @@ export default function ({
             </CustomRow>
 
             <CustomRow isBetween >
-                <CustomText
-                    title='990.000 đ'
+                <CustomTextCurrency
+                    title='990.000'
                     color='#90959E'
                     fontWeight={600}
                     fontSize={20}
                     style={{ textDecoration: "line-through" }}
+                    iconGrey={true}
+                    iconWidth={12}
+                    iconHeight={16}
+                    iconStyle={{ marginTop: -8, marginLeft: 3 }}
                 />
                 <Stack direction='horizontal' gap={1}>
                     <Image

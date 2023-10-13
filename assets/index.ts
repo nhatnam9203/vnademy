@@ -58,6 +58,7 @@ import ic_reward from "./ic_reward.png";
 import ic_clock_2 from "./ic_clock_2.png";
 import ic_hand from "./ic_hand.png";
 import ic_heart from "./ic_heart.png";
+import ic_vnd_grey from "./ic_vnd_grey.png";
 
 export {
     logo_vnademy,
@@ -119,6 +120,7 @@ export {
     ic_reward,
     ic_clock_2,
     ic_hand,
-    ic_heart
+    ic_heart,
+    ic_vnd_grey
     
 }   

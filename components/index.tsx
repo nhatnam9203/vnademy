@@ -11,6 +11,7 @@ import TopBar from "./TopBar";
 import CustomRow from "./CustomRow";
 import CustomPhoneInput from "./CustomPhoneInput";
 import CourseItem from "./CourseItem";
+import CustomTextCurrency from "./CustomTextCurrency";
 
 export {
     CustomButton,
@@ -25,5 +26,6 @@ export {
     TopBar,
     CustomRow,
     CustomPhoneInput,
-    CourseItem
+    CourseItem,
+    CustomTextCurrency
 }
