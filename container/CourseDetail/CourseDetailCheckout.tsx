@@ -10,7 +10,12 @@ import {
 } from "assets";
 import { Stack } from "react-bootstrap";
 import Image from "next/image";
-import { title } from 'process';
+import {
+    ic_clock_2,
+    ic_play,
+    ic_hand,
+    ic_reward
+} from "assets";
 
 export default function () {
     return (
@@ -41,14 +46,6 @@ export default function () {
                         style={{ marginLeft: 5 }}
                     />
                 </Stack>
-                {/* <CustomRow>
-                    <CustomText
-                        title='Tiết kiệm: '
-                        color='#E81E25'
-                        fontWeight={600}
-                        fontSize={14}
-                    />
-                </CustomRow> */}
             </CustomRow>
 
             <CustomRow isBetween >
@@ -75,14 +72,80 @@ export default function () {
                 </Stack>
             </CustomRow>
 
-            <CustomButton
-                onClick={() => { }}
-                title='THÊM VÀO GIỎ'
-                width={"100%"}
-                height={61}
-                style={{ borderRadius: 5 }}
-                
+            <Stack gap={3} style={{ marginTop: 20 }}>
+                <CustomButton
+                    onClick={() => { }}
+                    title='MUA NGAY'
+                    width={"100%"}
+                    height={61}
+                    style={{ borderRadius: 5, background: "#FFE000", color: "#1D252C" }}
+                    className={styles.button_buy_now}
+                />
+                <CustomButton
+                    onClick={() => { }}
+                    title='THÊM VÀO GIỎ'
+                    width={"100%"}
+                    height={61}
+                    style={{ borderRadius: 5 }}
+
+                />
+            </Stack>
+
+            <hr style={{ marginLeft: -24, marginRight: -24, marginTop: 24 }} />
+
+            <CustomText
+                title='Khoá học này bao gồm:'
+                color='#1D252C'
+                fontWeight={700}
+                fontSize={16}
+                style={{ marginTop: 16 }}
             />
+
+            <Stack style={{ marginTop: 16 }} gap={3}>
+                <CustomRow>
+                    <Image src={ic_clock_2} width={18} height={18} alt='ic_img' />
+                    <CustomText
+                        title='Thời lượng: 06 giờ 10 phút'
+                        fontWeight={500}
+                        fontSize={14}
+                        color='#1D252C'
+                        style={{ marginLeft: 8 }}
+                    />
+                </CustomRow>
+                <CustomRow>
+                    <Image src={ic_play} width={18} height={18} alt='ic_img' />
+                    <CustomText
+                        title='Giáo trình: 52 bài giảng'
+                        fontWeight={500}
+                        fontSize={14}
+                        color='#1D252C'
+                        style={{ marginLeft: 8 }}
+                    />
+                </CustomRow>
+                <CustomRow>
+                    <Image src={ic_hand} width={18} height={18} alt='ic_img' />
+                    <CustomText
+                        title='Sở hữu khóa học trọn đời'
+                        fontWeight={500}
+                        fontSize={14}
+                        color='#1D252C'
+                        style={{ marginLeft: 8 }}
+                    />
+                </CustomRow>
+                <CustomRow>
+                    <Image src={ic_reward} width={18} height={18} alt='ic_img' />
+                    <CustomText
+                        title='Giấy chứng nhận hoàn thành'
+                        fontWeight={500}
+                        fontSize={14}
+                        color='#1D252C'
+                        style={{ marginLeft: 8 }}
+                    />
+                </CustomRow>
+            </Stack>
+
+            <hr style={{ marginLeft: -24, marginRight: -24, marginTop: 24 }} />
+
         </div>
     );
 }

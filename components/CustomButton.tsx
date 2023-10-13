@@ -13,7 +13,7 @@ interface IProps {
     style?: CSSProperties,
     isHover?: boolean,
     type?: "button" | "reset" | "submit",
-    isButtonTransparent? : boolean
+    isButtonTransparent? : boolean,
 }
 
 export default function CustomButton({

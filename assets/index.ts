@@ -54,6 +54,9 @@ import ic_ticked from "./ic_ticked.png";
 import ic_minus from "./ic_minus.png";
 import ic_plus_black from "./ic_plus_black.png";
 import ic_promotion from "./ic_promotion.png";
+import ic_reward from "./ic_reward.png";
+import ic_clock_2 from "./ic_clock_2.png";
+import ic_hand from "./ic_hand.png";
 
 export {
     logo_vnademy,
@@ -111,6 +114,9 @@ export {
     ic_ticked,
     ic_minus,
     ic_plus_black,
-    ic_promotion
+    ic_promotion,
+    ic_reward,
+    ic_clock_2,
+    ic_hand
     
 }   

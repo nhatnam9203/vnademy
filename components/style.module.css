@@ -18,7 +18,7 @@
     justify-content: center;
 }
 
-.custom_button .custom_button_transparent{
+.custom_button, .custom_button_transparent{
     background: var(--primary-color);
     color: #ffffff;
     border-radius: 5px;
