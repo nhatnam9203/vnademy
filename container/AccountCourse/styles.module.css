@@ -1,0 +1,92 @@
+.cart_header{
+    width: 100vw;
+    background-color: var( --blue-2-color);
+    display: flex;
+    flex-direction: column;
+    height: 266px;
+    padding-top: 24px ;
+}
+
+.cart_body{
+    background: #F0F2F4;
+    width: 100%;
+}
+
+.what_you_learn, .course_introduce{
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 24px 24px 50px 24px;
+}
+
+.course_introduce{
+    margin-top: 20px;
+}
+
+.icon_plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-right: 1px solid #C5CBD5;
+}
+
+.wrapRating{
+    border: 1px solid #C5CBD5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    flex-direction: column;
+    padding: 10px 0px 25px 0px;
+}
+
+.studenComment{
+    background-color: #F5FAFF;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 8px;
+}
+
+.studentLetter{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #70757D;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 300px;
+    margin-right: 20px;
+}
+
+.viewMore{
+    display: flex;
+    justify-content: center;
+}
+
+.button_buy_now:hover{
+    background-color: transparent !important;
+    color: #FFE000 !important;
+}
+
+.button_buy_now{
+    border: 1.3px solid #FFE000 !important;
+}
+
+.courde_detail_checkout{
+    transform: translateY(-300px);
+}
+
+.btn_hover:hover{
+    background: rgba(0, 0, 0, 0.25)!important;
+    color: #ffffff !important;
+}
+
+.btn_hover_2:hover{
+    background: rgba(0, 0, 0, 0.25)!important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}

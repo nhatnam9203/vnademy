@@ -59,6 +59,13 @@ import ic_clock_2 from "./ic_clock_2.png";
 import ic_hand from "./ic_hand.png";
 import ic_heart from "./ic_heart.png";
 import ic_vnd_grey from "./ic_vnd_grey.png";
+import ic_camera from "./ic_camera.png";
+import ic_folder from "./ic_folder.png";
+import ic_member from "./ic_member.png";
+import ic_star_black from "./ic_star_black.png";
+import ic_search_black from "./ic_search_black.png";
+import ic_heart_black from "./ic_heart_black.png";
+import ic_course from "./ic_course.png";
 
 export {
     logo_vnademy,
@@ -121,6 +128,12 @@ export {
     ic_clock_2,
     ic_hand,
     ic_heart,
-    ic_vnd_grey
-    
+    ic_vnd_grey,
+    ic_camera,
+    ic_folder,
+    ic_member,
+    ic_star_black,
+    ic_search_black,
+    ic_heart_black,
+    ic_course
 }   
