@@ -86,7 +86,40 @@
 }
 
 .btn_hover_2:hover{
-    background: rgba(0, 0, 0, 0.25)!important;
+    background: rgba(0, 0, 0, 0.2 5)!important;
     color: #ffffff !important;
     border-color: #ffffff !important;
+}
+
+.menu{
+    background: #ffffff;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 80px;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    border-bottom: 1px solid #dddddd;
+}
+
+.lineTabbar{
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 150px;
+    background-color: #2B5DF5;
+    left: 0;
+}
+
+.containerBody{
+    transform: translateY(-80px);
+}
+
+.courseList{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #ffffff;
 }

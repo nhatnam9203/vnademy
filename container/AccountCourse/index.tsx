@@ -1,16 +1,20 @@
-import { CustomRow, CustomText, CustomButton } from "@/components";
+import { CustomRow, CustomText, CustomButton, CustomIcon } from "@/components";
 import { Stack, Container, Row, Col } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import {
     ic_arrow_right_white,
     teacher_example,
     ic_star,
     ic_star_half_2,
-    ic_double_person
+    ic_double_person,
+    ic_cart_image_example,
+    ic_entrance
 } from "assets";
+import { menu } from "./menu";
+import ProgressBar from 'react-customizable-progressbar'
 
 interface IErros {
     email: object,
@@ -23,11 +27,32 @@ interface IProps {
     controlForm: any
 };
 
-export default function Cart({
+export default function ({
     errosForm,
     handleSubmit,
     controlForm
 }: IProps) {
+
+    const [activeMenu, setActiveMenu] = React.useState<number>(0);
+    const [translateXMenu, setTranslateXMenu] = React.useState<string>("0px");
+
+    console.log({ translateXMenu })
+
+    const onClickMenuItem = (position: number) => {
+        if (activeMenu !== position) {
+            if (position > activeMenu) {
+                setTranslateXMenu(
+                    `${150 * position}px`
+                );
+            } else {
+                setTranslateXMenu(
+                    `-${150 * position}px`
+                );
+            }
+            setActiveMenu(position);
+        }
+    };
+
     return (
         <>
             <div className={styles.cart_header}>
@@ -72,7 +97,7 @@ export default function Cart({
                                 }}
                                 className={styles.btn_hover}
                             />
-                             <CustomButton
+                            <CustomButton
                                 title="CẬP NHẬT HỒ SƠ"
                                 onClick={() => { }}
                                 fontSize={14}
@@ -92,8 +117,123 @@ export default function Cart({
             </div>
 
             <div className={styles.cart_body}>
+                <Container>
+                    <div className={styles.containerBody}>
+                        <div className={styles.menu}>
+                            {
+                                menu.map((it, idx) => (
+                                    <MenuItem
+                                        icon={it.icon}
+                                        title={it.title}
+                                        key={it.title}
+                                        onClick={() => onClickMenuItem(idx + 1)}
+                                    />
+                                ))
+                            }
+                            <div
+                                className={styles.lineTabbar}
+                                style={{
+                                    left: translateXMenu
+                                }}
+                            />
+                        </div>
 
+                        <div className={styles.courseList}>
+                            <Stack>
+                                <Image
+                                    src={ic_cart_image_example}
+                                    width={300}
+                                    height={180}
+                                    alt="image_example"
+                                    style={{
+                                        borderTopLeftRadius: 16,
+                                        borderTopRightRadius: 16
+                                    }}
+                                />
+
+                                <Stack
+                                    style={{
+                                        border: "1px solid #dddddd",
+                                        width: "100%",
+                                        maxWidth: 300,
+                                        padding: 16,
+                                        borderBottomLeftRadius: 16,
+                                        borderBottomRightRadius: 16
+                                    }}
+                                    gap={2}
+                                >
+                                    <CustomText
+                                        title="Lập trình Web tốc độ cao, thời gian thực với NodeJS"
+                                        color="#1D252C"
+                                        fontSize={15}
+                                        fontWeight={700}
+                                        style={{ width: "100%", maxWidth: 300 }}
+                                    />
+
+                                    <CustomRow>
+                                        <CustomIcon
+                                            icon={ic_entrance}
+                                            title="VÀO HỌC"
+                                            titleColor="#1D252C"
+                                            fontWeight={700}
+                                            fontSize={15}
+                                            onClick={() => { }}
+                                            alt="entrance"
+                                            width={18}
+                                            height={16}
+                                            style={{
+                                                background: "#FFE000", width: 180, height: 42,
+                                                justifyContent: "center",
+                                                alignItems: "center",
+                                                borderRadius: 3
+                                            }}
+                                        />
+                                        <ProgressBar
+                                            progress={60}
+                                            radius={17}
+                                            strokeWidth={6}
+                                            strokeColor='#16C60C'
+                                            trackStrokeWidth={6}
+                                            trackStrokeColor="#EAEBED"
+                                            initialAnimation={true}
+                                        />
+                                    </CustomRow>
+                                </Stack>
+                            </Stack>
+                        </div>
+                    </div>
+                </Container>
             </div>
         </>
     )
+};
+
+interface IMenuItem {
+    icon: StaticImageData,
+    title: string,
+    onClick: () => void
 }
+
+const MenuItem = ({
+    icon,
+    title,
+    onClick
+}: IMenuItem) => {
+    return (
+        <CustomRow onClick={onClick} width={150} style={{ cursor: "pointer" }}>
+            <Image
+                src={icon}
+                width={20}
+                height={20}
+                alt="icon_menu"
+            />
+            <CustomText
+                title={title}
+                fontWeight={600}
+                fontSize={14}
+                color="#2B5DF5"
+                style={{ marginLeft: 10 }}
+            />
+        </CustomRow>
+    );
+};

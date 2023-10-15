@@ -21,6 +21,7 @@ export default function CustomRow({
 }: IProps) {
     return (
         <div
+            onClick={onClick}
             style={{
                 width,
                 ...(style && { ...style }),
