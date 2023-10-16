@@ -10,6 +10,8 @@ import {
     ic_cart,
     ic_lock,
     ic_people,
+    ic_entrance,
+    teacher_example
 } from "assets/index";
 import SearchBar from "./SearchBar";
 
@@ -18,6 +20,8 @@ export default function TopBar() {
     const register = () => {
 
     };
+
+    const isLogin = true;
 
     return (
         <div className={styles.topbar_wrap}>
@@ -48,12 +52,12 @@ export default function TopBar() {
                             title="Gói hội viên"
                             isHover
                         />
-                        <CustomImage
+                        {/* <CustomImage
                             src={ic_cart}
                             width={23}
                             height={23}
                             alt="ic_cart"
-                            style={{ objectFit: "cover", marginRight: 16 }}
+                            style={{ objectFit: "cover", marginRight: 16, cursor: "pointer" }}
                         />
                         <CustomText
                             title="ĐĂNG NHẬP"
@@ -66,7 +70,42 @@ export default function TopBar() {
                             onClick={register}
                             width={105}
                             height={42}
+                        /> */}
+
+                        <CustomIcon
+                            icon={ic_entrance}
+                            title="VÀO HỌC"
+                            titleColor="#1D252C"
+                            fontWeight={700}
+                            fontSize={14}
+                            onClick={() => { }}
+                            alt="entrance"
+                            width={14}
+                            height={16}
+                            style={{
+                                background: "#FFE000", width: 120, height: 42,
+                                justifyContent: "center",
+                                alignItems: "center",
+                                borderRadius: 3
+                            }}
                         />
+
+                        <CustomImage
+                            src={ic_cart}
+                            width={23}
+                            height={23}
+                            alt="ic_cart"
+                            style={{ objectFit: "cover", marginRight: 16, cursor: "pointer" }}
+                        />
+
+                        <CustomImage
+                            src={teacher_example}
+                            width={42}
+                            height={42}
+                            alt="teacher"
+                            style={{ borderRadius: 3000, cursor: "pointer"  }}
+                        />
+
                     </div>
                 </div>
             </Container>

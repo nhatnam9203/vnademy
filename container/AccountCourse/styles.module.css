@@ -3,7 +3,7 @@
     background-color: var( --blue-2-color);
     display: flex;
     flex-direction: column;
-    height: 266px;
+    height: 226px;
     padding-top: 24px ;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .btn_hover_2:hover{
-    background: rgba(0, 0, 0, 0.2 5)!important;
+    background: rgba(0, 0, 0, 0.25)!important;
     color: #ffffff !important;
     border-color: #ffffff !important;
 }

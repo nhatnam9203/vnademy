@@ -1,15 +1,11 @@
 import { CustomRow, CustomText, CustomButton, CustomIcon, CustomCircleBar } from "@/components";
-import { Stack, Container, Row, Col } from "react-bootstrap";
+import { Stack, Container } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
 import Image, { StaticImageData } from "next/image";
 
 import {
-    ic_arrow_right_white,
     teacher_example,
-    ic_star,
-    ic_star_half_2,
-    ic_double_person,
     ic_cart_image_example,
     ic_entrance
 } from "assets";
@@ -33,12 +29,12 @@ export default function ({
 }: IProps) {
 
     const [activeMenu, setActiveMenu] = React.useState<number>(0);
-    const [translateXMenu, setTranslateXMenu] = React.useState<string>("0px");
+    const [translateXMenu, setTranslateXMenu] = React.useState<string>("30px");
 
     const onClickMenuItem = (position: number) => {
         if (activeMenu !== position) {
             setTranslateXMenu(
-                `${150 * position}px`
+                `${(150 * position) + 30}px`
             );
             setActiveMenu(position);
         }
