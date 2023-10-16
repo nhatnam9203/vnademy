@@ -1,4 +1,4 @@
-import { CustomRow, CustomText, CustomButton, CustomIcon } from "@/components";
+import { CustomRow, CustomText, CustomButton, CustomIcon, CustomCircleBar } from "@/components";
 import { Stack, Container, Row, Col } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
@@ -14,7 +14,6 @@ import {
     ic_entrance
 } from "assets";
 import { menu } from "./menu";
-import ProgressBar from 'react-customizable-progressbar'
 
 interface IErros {
     email: object,
@@ -160,7 +159,7 @@ export default function ({
                                         borderBottomLeftRadius: 16,
                                         borderBottomRightRadius: 16
                                     }}
-                                    gap={2}
+                                    gap={0}
                                 >
                                     <CustomText
                                         title="Lập trình Web tốc độ cao, thời gian thực với NodeJS"
@@ -170,7 +169,7 @@ export default function ({
                                         style={{ width: "100%", maxWidth: 300 }}
                                     />
 
-                                    <CustomRow>
+                                    <CustomRow isBetween>
                                         <CustomIcon
                                             icon={ic_entrance}
                                             title="VÀO HỌC"
@@ -188,14 +187,8 @@ export default function ({
                                                 borderRadius: 3
                                             }}
                                         />
-                                        <ProgressBar
+                                        <CustomCircleBar
                                             progress={60}
-                                            radius={17}
-                                            strokeWidth={6}
-                                            strokeColor='#16C60C'
-                                            trackStrokeWidth={6}
-                                            trackStrokeColor="#EAEBED"
-                                            initialAnimation={true}
                                         />
                                     </CustomRow>
                                 </Stack>
