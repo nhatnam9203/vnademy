@@ -35,19 +35,11 @@ export default function ({
     const [activeMenu, setActiveMenu] = React.useState<number>(0);
     const [translateXMenu, setTranslateXMenu] = React.useState<string>("0px");
 
-    console.log({ translateXMenu })
-
     const onClickMenuItem = (position: number) => {
         if (activeMenu !== position) {
-            if (position > activeMenu) {
-                setTranslateXMenu(
-                    `${150 * position}px`
-                );
-            } else {
-                setTranslateXMenu(
-                    `-${150 * position}px`
-                );
-            }
+            setTranslateXMenu(
+                `${150 * position}px`
+            );
             setActiveMenu(position);
         }
     };
@@ -125,7 +117,7 @@ export default function ({
                                         icon={it.icon}
                                         title={it.title}
                                         key={it.title}
-                                        onClick={() => onClickMenuItem(idx + 1)}
+                                        onClick={() => onClickMenuItem(idx)}
                                     />
                                 ))
                             }
