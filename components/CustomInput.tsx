@@ -44,6 +44,7 @@ export default function CustomInput({
                     fontSize,
                     fontWeight,
                     color,
+                    background : "transparent",
                     ...(inputStyle && { ...inputStyle }),
                 }}
                 className={styles.custom_input}

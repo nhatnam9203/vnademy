@@ -122,6 +122,7 @@ input{
   font-weight: 400;
   color: #70757D;
   border: none !important;
+  background: transparent;
 }
 
 input::placeholder{
