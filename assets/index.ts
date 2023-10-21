@@ -67,6 +67,7 @@ import ic_search_black from "./ic_search_black.png";
 import ic_heart_black from "./ic_heart_black.png";
 import ic_course from "./ic_course.png";
 import ic_entrance from "./ic_entrance.png";
+import ic_star_empty from "./ic_star_empty.png";
 
 export {
     logo_vnademy,
@@ -137,5 +138,6 @@ export {
     ic_search_black,
     ic_heart_black,
     ic_course,
-    ic_entrance
+    ic_entrance,
+    ic_star_empty
 }   

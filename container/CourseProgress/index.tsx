@@ -1,5 +1,5 @@
-import { CustomIcon, CustomText } from "@/components";
-import { Stack, Container, Row, Col } from "react-bootstrap";
+import { CustomIcon, CustomImage, CustomText } from "@/components";
+import { Stack, Container, Row, Col, Image as ImageBootstrap, Card } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
@@ -9,7 +9,6 @@ import TeacherInformation from "./TeacherInformation";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { CustomRow } from "components";
 
-
 import {
     ic_arrow_right_white,
     teacher_example,
@@ -17,7 +16,8 @@ import {
     ic_star_half_2,
     ic_double_person,
     ic_reward,
-    ic_play
+    ic_play,
+    banner_example
 } from "assets";
 
 interface IErros {
@@ -42,6 +42,11 @@ export default function Cart({
                 <Container style={{ background: "#ffffff" }}>
                     <Row>
                         <Col md={{ span: 6 }}>
+                            <Card.Img
+                                className="bot_features2-item--img"
+                                src={require("../../assets/ic_arrow_right.png")}
+                                alt="Harmony one"
+                            />
 
                         </Col>
                         <Col md={{ span: 6 }}>
@@ -99,7 +104,7 @@ export default function Cart({
                                     titleColor="#ffffff"
                                     fontSize={14}
                                     fontWeight={700}
-                                    style={{ 
+                                    style={{
                                         background: "#2B5DF5",
                                         width: "47%",
                                         justifyContent: "center",
@@ -107,7 +112,7 @@ export default function Cart({
                                         height: 50,
                                         borderRadius: 3,
                                         cursor: "pointer"
-                                     }}
+                                    }}
                                 />
                                 <CustomIcon
                                     icon={ic_reward}
@@ -119,7 +124,7 @@ export default function Cart({
                                     titleColor="#2B5DF5"
                                     fontSize={14}
                                     fontWeight={700}
-                                    style={{ 
+                                    style={{
                                         background: "transparent",
                                         width: "47%",
                                         justifyContent: "center",
@@ -128,7 +133,7 @@ export default function Cart({
                                         borderRadius: 3,
                                         border: "1px solid #2B5DF5",
                                         cursor: "pointer"
-                                     }}
+                                    }}
                                 />
                             </CustomRow>
                         </Col>
