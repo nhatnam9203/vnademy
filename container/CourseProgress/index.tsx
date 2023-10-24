@@ -1,5 +1,5 @@
-import { CustomIcon, CustomImage, CustomText } from "@/components";
-import { Stack, Container, Row, Col, Image as ImageBootstrap, Card } from "react-bootstrap";
+import { CustomIcon, CustomImage, CustomText, MenuItem } from "@/components";
+import { Container, Row, Col } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
@@ -8,13 +8,9 @@ import CourseIntroduce from "./CourseIntroduce";
 import TeacherInformation from "./TeacherInformation";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { CustomRow } from "components";
+import { menu } from "./menu";
 
 import {
-    ic_arrow_right_white,
-    teacher_example,
-    ic_star,
-    ic_star_half_2,
-    ic_double_person,
     ic_reward,
     ic_play,
     banner_example
@@ -31,21 +27,28 @@ interface IProps {
     controlForm: any
 };
 
-export default function Cart({
+export default function Index({
     errosForm,
     handleSubmit,
     controlForm
 }: IProps) {
+
+    const onClickMenuItem = (index: number) => {
+
+    };
+
     return (
         <>
             <div className={styles.cart_header}>
-                <Container style={{ background: "#ffffff" }}>
+                <Container style={{ background: "#ffffff", padding: 16, marginTop: 12, borderRadius: 12 }}>
                     <Row>
                         <Col md={{ span: 6 }}>
-                            <Card.Img
-                                className="bot_features2-item--img"
-                                src={require("../../assets/ic_arrow_right.png")}
-                                alt="Harmony one"
+                            <CustomImage
+                                src={banner_example}
+                                alt="banner"
+                                width={636}
+                                height={300}
+                                style={{ objectFit: "cover", borderRadius: 8 }}
                             />
 
                         </Col>
@@ -138,6 +141,25 @@ export default function Cart({
                             </CustomRow>
                         </Col>
                     </Row>
+
+                    <div className={styles.menu}>
+                        {
+                            menu.map((it, idx) => (
+                                <MenuItem
+                                    title={it.title}
+                                    key={it.title}
+                                    onClick={() => onClickMenuItem(idx)}
+                                    textColor="#1D252C"
+                                />
+                            ))
+                        }
+                        {/* <div
+                                className={styles.lineTabbar}
+                                style={{
+                                    left: translateXMenu
+                                }}
+                            /> */}
+                    </div>
                 </Container>
             </div>
 

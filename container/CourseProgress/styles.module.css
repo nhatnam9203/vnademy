@@ -80,3 +80,17 @@
 .courde_detail_checkout{
     transform: translateY(-300px);
 }
+
+
+.menu{
+    background: #ffffff;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 80px;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    border-bottom: 1px solid #dddddd;
+}

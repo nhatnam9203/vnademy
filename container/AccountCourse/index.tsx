@@ -1,4 +1,4 @@
-import { CustomRow, CustomText, CustomButton, CustomIcon, CustomCircleBar } from "@/components";
+import { CustomRow, CustomText, CustomButton, CustomIcon, CustomCircleBar, MenuItem} from "@/components";
 import { Stack, Container } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
@@ -187,34 +187,4 @@ export default function ({
             </div>
         </>
     )
-};
-
-interface IMenuItem {
-    icon: StaticImageData,
-    title: string,
-    onClick: () => void
-}
-
-const MenuItem = ({
-    icon,
-    title,
-    onClick
-}: IMenuItem) => {
-    return (
-        <CustomRow onClick={onClick} width={150} style={{ cursor: "pointer" }}>
-            <Image
-                src={icon}
-                width={20}
-                height={20}
-                alt="icon_menu"
-            />
-            <CustomText
-                title={title}
-                fontWeight={600}
-                fontSize={14}
-                color="#2B5DF5"
-                style={{ marginLeft: 10 }}
-            />
-        </CustomRow>
-    );
 };

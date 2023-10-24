@@ -2,6 +2,7 @@ import { CustomFormInput, CustomForm, CustomText, CustomButton } from "@/compone
 import { Stack } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
+import useRouter from "@/hooks/useRouter";
 
 interface IErros {
     email: object,
@@ -22,6 +23,7 @@ export default function ForgotPassword({
 }: IProps) {
 
     const [value, setValue] = React.useState<string>('');
+    const [routerPush] = useRouter();
 
     const onChangeInput = (e: any) => {
         const inputValue = e.target.value;
@@ -86,6 +88,7 @@ export default function ForgotPassword({
                         color="#2B5DF5"
                         fontSize={16}
                         style={{ textDecoration: 'underline', cursor: "pointer" }}
+                        onClick={()=>routerPush("/LoginPage")}
                     />
                 </Stack>
             </div>

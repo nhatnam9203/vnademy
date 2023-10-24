@@ -12,9 +12,10 @@ import {
 } from "assets";
 import React from "react";
 import styles from "./styles.module.css";
+import useRouter from "@/hooks/useRouter";
 
-interface IErros{
-    email : object,
+interface IErros {
+    email: object,
     password: object
 }
 
@@ -31,6 +32,7 @@ export default function Login({
 }: IProps) {
 
     const [value, setValue] = React.useState<string>('');
+    const [routerPush] = useRouter();
 
     const onChangeInput = (e: any) => {
         const inputValue = e.target.value;
@@ -105,6 +107,7 @@ export default function Login({
                             color="#2B5DF5"
                             fontSize={16}
                             isHover
+                            onClick={() => routerPush("/ForgotPassword")}
                         />
                     </div>
 
@@ -116,8 +119,8 @@ export default function Login({
                         isHover
                         fontSize={20}
                         fontWeight={700}
-                        onClick={() => { }}
                         style={{ marginTop: 20 }}
+                        onClick={()=>{}}
                     />
                 </CustomForm>
 
@@ -134,6 +137,7 @@ export default function Login({
                         color="#2B5DF5"
                         fontSize={16}
                         style={{ textDecoration: 'underline', cursor: "pointer" }}
+                        onClick={() => routerPush("/Register")}
                     />
                 </Stack>
 

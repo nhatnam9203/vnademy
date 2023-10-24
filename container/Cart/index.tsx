@@ -27,6 +27,7 @@ export default function Cart({
     handleSubmit,
     controlForm
 }: IProps) {
+
     return (
         <>
             <div className={styles.cart_header}>

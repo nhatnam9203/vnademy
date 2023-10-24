@@ -13,6 +13,7 @@ import CustomPhoneInput from "./CustomPhoneInput";
 import CourseItem from "./CourseItem";
 import CustomTextCurrency from "./CustomTextCurrency";
 import CustomCircleBar from "./CustomCircleBar";
+import MenuItem from "./MenuItem";
 
 export {
     CustomButton,
@@ -29,5 +30,6 @@ export {
     CustomPhoneInput,
     CourseItem,
     CustomTextCurrency,
-    CustomCircleBar
+    CustomCircleBar,
+    MenuItem
 }

@@ -6,11 +6,14 @@ import CustomIcon from "./CustomIcon";
 import { Container, Row, Col, Stack } from "react-bootstrap";
 import { logo_vnademy, ic_location, ic_facebook, ic_linkedin, ic_youtube, ic_twitter } from "assets";
 import styles from './style.module.css';
+import useRouter from "@/hooks/useRouter";
 
 export default function FoooterBar() {
 
-    const register = () => {
+    const [routerPush] = useRouter();
 
+    const register = () => {
+        routerPush("/Register");
     };
 
     return (

@@ -2,6 +2,7 @@ import { CustomText, CustomButton, CustomFormInput } from "@/components";
 import { Stack } from "react-bootstrap";
 import React from "react";
 import styles from "./styles.module.css";
+import useRouter from "@/hooks/useRouter";
 
 interface IProps {
     errosForm: object,
@@ -15,6 +16,9 @@ export default function CartCheckout({
     handleSubmit,
     controlForm
 }: IProps) {
+
+    const [routerPush] = useRouter();
+
     return (
         <div className={styles.cart_checkout}>
             <div className={styles.cart_checkout_wrap}>
@@ -39,7 +43,7 @@ export default function CartCheckout({
                     isHover
                     fontSize={20}
                     fontWeight={700}
-                    onClick={() => { }}
+                    onClick={() => routerPush("Checkout")}
                     style={{ marginTop: 12 }}
                 />
             </div>

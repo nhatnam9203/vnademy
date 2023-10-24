@@ -2,8 +2,6 @@ import React from "react";
 import { logo_vnademy } from "assets";
 import { Container } from "react-bootstrap";
 import CustomImage from "./CustomImage";
-import CustomButton from "./CustomButton";
-import CustomText from "./CustomText";
 import CustomIcon from "./CustomIcon";
 import styles from './style.module.css';
 import {
@@ -14,8 +12,11 @@ import {
     teacher_example
 } from "assets/index";
 import SearchBar from "./SearchBar";
+import useRouter from "@/hooks/useRouter";
 
 export default function TopBar() {
+
+    const [routerPush] = useRouter();
 
     const register = () => {
 
@@ -33,6 +34,7 @@ export default function TopBar() {
                         height={48}
                         alt="logo_vnademy"
                         style={{ objectFit: "cover", cursor: "pointer" }}
+                        onClick={()=> routerPush("/")}
                     />
                     <SearchBar />
                     <div className={styles.topbar_container_right}>
@@ -43,6 +45,7 @@ export default function TopBar() {
                             alt="ic_lock"
                             title="Kích hoạt khoá học"
                             isHover
+                            onClick={()=> routerPush("ActivateCourse")}
                         />
                         <CustomIcon
                             icon={ic_people}
@@ -78,7 +81,6 @@ export default function TopBar() {
                             titleColor="#1D252C"
                             fontWeight={700}
                             fontSize={14}
-                            onClick={() => { }}
                             alt="entrance"
                             width={14}
                             height={16}
@@ -88,6 +90,7 @@ export default function TopBar() {
                                 alignItems: "center",
                                 borderRadius: 3
                             }}
+                            onClick={()=> routerPush("AccountCourse")}
                         />
 
                         <CustomImage
@@ -96,6 +99,7 @@ export default function TopBar() {
                             height={23}
                             alt="ic_cart"
                             style={{ objectFit: "cover", marginRight: 16, cursor: "pointer" }}
+                            onClick={()=> routerPush("CartPage")}
                         />
 
                         <CustomImage
