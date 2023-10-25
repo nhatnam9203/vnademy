@@ -28,6 +28,7 @@
     "react-query": "^3.39.3",
     "react-redux": "^8.1.2",
     "react-responsive": "^9.0.2",
+    "react-simple-star-rating": "^5.1.7",
     "react-slick": "^0.29.0",
     "react-slide-toggle": "^0.3.5",
     "react-slidedown": "^2.4.7",

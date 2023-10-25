@@ -6,6 +6,7 @@ import Image from "next/image";
 import CourseContent from "./CourseContent";
 import CourseIntroduce from "./CourseIntroduce";
 import TeacherInformation from "./TeacherInformation";
+import CourseRating from "./CourseRating";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { CustomRow } from "components";
 import { menu } from "./menu";
@@ -47,7 +48,7 @@ export default function Index({
                                 src={banner_example}
                                 alt="banner"
                                 width={636}
-                                height={300}
+                                height={280}
                                 style={{ objectFit: "cover", borderRadius: 8 }}
                             />
 
@@ -173,6 +174,7 @@ export default function Index({
 
                         <Col md={{ span: 5 }}>
                             <TeacherInformation />
+                            <CourseRating />
                         </Col>
                     </Row>
                 </Container>
